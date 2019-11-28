@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Swipeable } from "react-swipeable";
 
 let arr = ["Choose for me", "Let me choose", "Store", "Outfits"];
@@ -24,31 +24,6 @@ class App extends Component {
     };
 
     return (
-      //   <React.Fragment>
-      //     <header>
-      //       <button className="btn btn-secondary">HOME</button>
-      //       <h1 className="logo-main">ai closet</h1>
-      //     </header>
-      //     <div id="main">
-      //       <Swipeable className="full-height slide-nav" {...config}>
-      //         <ul>
-      //           <li>
-      //             <Link to={links[0]}>{names[0]}</Link>
-      //           </li>
-      //           <li>
-      //             <Link to="#">{names[1]}</Link>
-      //           </li>
-      //           <li>
-      //             <Link to="#">{names[2]}</Link>
-      //           </li>
-      //           <li>
-      //             <Link to="#">{names[3]}</Link>
-      //           </li>
-      //         </ul>
-      //       </Swipeable>
-      //     </div>
-      //   </React.Fragment>
-      // );
       <React.Fragment>
         <header>
           <button className="btn btn-secondary">HOME</button>
@@ -58,16 +33,16 @@ class App extends Component {
           <Swipeable className="full-height slide-nav" {...config}>
             <ul>
               <li>
-                <a href={links[0]}>{names[0]}</a>
+                <Link to={links[0]}>{names[0]}</Link>
               </li>
               <li>
-                <a href="#">{names[1]}</a>
+                <Link to="">{names[1]}</Link>
               </li>
               <li>
-                <a href="#">{names[2]}</a>
+                <Link to="">{names[2]}</Link>
               </li>
               <li>
-                <a href="#">{names[3]}</a>
+                <Link to="">{names[3]}</Link>
               </li>
             </ul>
           </Swipeable>
