@@ -23,7 +23,7 @@ const routing = (
 );
 
 document.addEventListener("DOMContentLoaded", () => {
-  ReactDOM.render(<App />, document.getElementById("root"));
+  ReactDOM.render(routing, document.getElementById("root"));
   //ReactDOM.render(<App />, document.getElementById("root"));
   //ReactDOM.render(<AiCoordinate />, document.getElementById("ai"));
 });

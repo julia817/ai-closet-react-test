@@ -65,3 +65,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 # For using api
 gem 'httparty', '0.13.5'
+
+gem 'react-rails'

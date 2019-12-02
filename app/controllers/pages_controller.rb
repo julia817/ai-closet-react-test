@@ -1,7 +1,10 @@
 class PagesController < ApplicationController
   def index
-    @current_weather = Weather.current
-  	@forecast = Weather.forecast
+    current = Weather.current
+    @current_weather = current["weather"][0]["description"]
+    @current_degree = current["main"]["temp"]
+    # puts @current_weather
+    @forecast = Weather.forecast
   end
 
   def self_choose

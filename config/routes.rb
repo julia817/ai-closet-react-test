@@ -1,8 +1,11 @@
 Rails.application.routes.draw do
   resources :clothes
+  get '*path', to: redirect('/'), constraints: lambda { |req|
+    req.path.exclude? 'rails/active_storage'
+  }
 
   root 'pages#index'
-  match:'*path', to:'pages#index', via: :all
+  # match:'*path', to:'pages#index', via: :all
 
   # get 'pages/self_choose'
   # get 'pages/ai_choose'

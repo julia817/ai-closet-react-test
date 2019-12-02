@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { Swipeable } from "react-swipeable";
+import PropTypes from "prop-types"
 
 let arr = ["Choose for me", "Let me choose", "Store", "Outfits"];
 let links = ["/AiCoordinate", "/LetMeChoose", "/Store", "/Outfits"];
@@ -29,6 +30,10 @@ class App extends Component {
           <button className="btn btn-secondary">HOME</button>
           <h1 className="logo-main">ai closet</h1>
         </header>
+        <div>
+          今の天気：{this.props.weather}
+          今の気温：{this.props.degree}℃
+        </div>
         <div id="main">
           <Swipeable className="full-height slide-nav" {...config}>
             <ul>
@@ -84,5 +89,11 @@ class App extends Component {
     this.setState({ menuArray: arr, menuLinks: links });
   };
 }
+
+App.propTypes = {
+  weather: PropTypes.string,
+  degree: PropTypes.string
+};
+
 
 export default App;
