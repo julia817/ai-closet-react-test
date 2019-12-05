@@ -14,21 +14,22 @@
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
 
-console.log("Hello World from Webpacker");
+// console.log("Hello World from Webpacker");
 // Support component names relative to this directory:
 // Run this example by adding <%= javascript_pack_tag 'hello_react' %> to the head of your layout file,
 // like app/views/layouts/application.html.erb. All it does is render <div>Hello React</div> at the bottom
 // of the page.
 
-import React from "react";
-import ReactDOM from "react-dom";
+// import React from "react";
+// import ReactDOM from "react-dom";
 import "../scss/style.scss";
-import App from "../components/App";
-import LetMeChoose from "../components/LetMeChoose";
+
+// import App from "../components/App";
+// import LetMeChoose from "../components/LetMeChoose";
 
 // import { Route, BrowserRouter as Router } from "react-router-dom";
 // import { Redirect } from "react-router-dom";
-import AiCoordinate from "../components/AiCoordinate";
+// import AiCoordinate from "../components/AiCoordinate";
 
 var componentRequireContext = require.context("components", true);
 var ReactRailsUJS = require("react_ujs");

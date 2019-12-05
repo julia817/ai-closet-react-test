@@ -1,15 +1,14 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 
 class AiCoordinate extends Component {
   state = {};
   render() {
     return (
-      <React.Fragment>
+      <div className="body">
         <header>
-          <Link to="/">
+          <a href="/">
             <button className="btn btn-secondary">Back</button>
-          </Link>
+          </a>
           <h1 className="logo-main">ai closet</h1>
         </header>
         <main>
@@ -40,7 +39,7 @@ class AiCoordinate extends Component {
             </div>
           </div>
         </main>
-      </React.Fragment>
+      </div>
     );
   }
 }
