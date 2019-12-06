@@ -5,14 +5,10 @@ import ClothsNavigtation from "./components/LMCMenu";
 
 class LetMeChoose extends Component {
   state = {
-    isToggledOn: false,
     toggles: [
       { id: 1, isToggleOn: false, value: "Tops" },
-
       { id: 3, isToggleOn: false, value: "Bottoms" },
-
       { id: 5, isToggleOn: false, value: "Accesories" },
-
       { id: 7, isToggleOn: false, value: "Others" }
     ]
   };

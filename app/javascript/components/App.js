@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import { Swipeable } from "react-swipeable";
 import PropTypes from "prop-types";
+
 import Menu from "./components/menu";
-// Array declaration. I do it here for easier manipulation
+// Array declaration. I do it here for easier manipulationlet
 let menuText = ["Choose for me", "Let me choose", "Store", "Outfits"];
 let menuLinks = ["/AiCoordinate", "/LetMeChoose", "/Store", "/Outfits"];
-
 // App.propTypes = {
 //   weather: PropTypes.string,
 //   degree: PropTypes.string
@@ -13,8 +13,6 @@ let menuLinks = ["/AiCoordinate", "/LetMeChoose", "/Store", "/Outfits"];
 
 class App extends Component {
   state = {
-    menuArray: menuText,
-    menuLinks: menuLinks,
     menuData: [
       { id: 1, data: menuText[0], link: menuLinks[0] },
       { id: 2, data: menuText[1], link: "#" },
@@ -26,9 +24,7 @@ class App extends Component {
   render() {
     //Swipe gesture settings for menu calling the handleMenu function
     const config = {
-      onSwipedUp: () => {
-        this.handleMenu("up");
-      },
+      onSwipedUp: () => this.handleMenu("up"),
       onSwipedDown: () => this.handleMenu("down"),
       preventDefaultTouchmoveEvent: true,
       trackMouse: true
@@ -72,6 +68,7 @@ class App extends Component {
   };
 
   //Handles menu movement by input of either "up" or "down" into (direction)
+
   handleMenu = direction => {
     let menuArray = menuText.slice();
     let spliceLinks = menuLinks.slice();
@@ -85,11 +82,10 @@ class App extends Component {
     }
 
     // then updates the state
-    menuLinks = spliceLinks;
     menuText = menuArray;
+
+    menuLinks = spliceLinks;
     this.setState({
-      menuArray: menuText,
-      menuLinks: menuLinks,
       menuData: [
         { id: 1, data: menuText[0], link: menuLinks[0] },
         { id: 2, data: menuText[1], link: "#" },
