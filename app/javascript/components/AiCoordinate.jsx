@@ -1,7 +1,14 @@
 import React, { Component } from "react";
+import Item from "./components/item";
 
 class AiCoordinate extends Component {
-  state = {};
+  state = {
+    item: [
+      { id: 1, itemName: "Casual", image: "#" },
+      { id: 2, itemName: "Business Casual", image: "#" },
+      { id: 3, itemName: "Formal", image: "#" }
+    ]
+  };
   render() {
     return (
       <div className="body">
@@ -12,6 +19,12 @@ class AiCoordinate extends Component {
           <h1 className="logo-main">ai closet</h1>
         </header>
         <main>
+          {this.state.item.map(item => (
+            <Item key={item.id} itemName={item.itemName} />
+          ))}
+        </main>
+      </div>
+      /* <main>
           <div className="items">
             <div className="item-wrapper">
               <div className="item">
@@ -39,7 +52,7 @@ class AiCoordinate extends Component {
             </div>
           </div>
         </main>
-      </div>
+      </div> */
     );
   }
 }
