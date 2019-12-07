@@ -1,24 +1,30 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# AI Closet
 
-Things you may want to cover:
+### 未来創造店の作品です
 
-* Ruby version
+## 簡単な情報:
 
-* System dependencies
+*Ruby version
+  2.6.5
+  
+*Rails version
+  5.2.3
+  
+*System dependencies
+  -yarn
+  -react-rails
+  -httparty
+  -webpacker
+    -react
 
-* Configuration
+_もっと詳し情報はgemfileとyarnファイルで見れます_
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+*Configuration
+  サーバ実行　`rails s` 
+  おすすめは `rails s`, と `./bin/webpack-dev-server` を同時で使うとコンパイル時間なくなります。
+  
+  
+  **　TODO: 
+      これからここで書き込みます。
