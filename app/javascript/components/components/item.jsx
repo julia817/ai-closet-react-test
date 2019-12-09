@@ -8,7 +8,7 @@ class Item extends Component {
         <div className="item-wrapper">
           <div className="item">
             <div className="img-item">
-              <img src="#" alt="" />
+              <img src={this.props.image} alt="" />
             </div>
             <h3>{this.state.itemName}</h3>
           </div>

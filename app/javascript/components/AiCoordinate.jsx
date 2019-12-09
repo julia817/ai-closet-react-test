@@ -19,40 +19,13 @@ class AiCoordinate extends Component {
           <h1 className="logo-main">ai closet</h1>
         </header>
         <main>
-          {this.state.item.map(item => (
-            <Item key={item.id} itemName={item.itemName} />
-          ))}
-        </main>
-      </div>
-      /* <main>
-          <div className="items">
-            <div className="item-wrapper">
-              <div className="item">
-                <div className="img-item">
-                  <img src="#" alt="" />
-                </div>
-                <h3>Casual</h3>
-              </div>
-            </div>
-            <div className="item-wrapper">
-              <div className="item">
-                <div className="img-item">
-                  <img src="#" alt="" />
-                </div>
-                <h3>Business Casual</h3>
-              </div>
-            </div>
-            <div className="item-wrapper">
-              <div className="item">
-                <div className="img-item">
-                  <img src="#" alt="" />
-                </div>
-                <h3>Formal</h3>
-              </div>
-            </div>
+          <div className="items-div">
+            {this.state.item.map(item => (
+              <Item key={item.id} itemName={item.itemName} />
+            ))}
           </div>
         </main>
-      </div> */
+      </div>
     );
   }
 }

@@ -38,10 +38,6 @@ class App extends Component {
           <button className="btn btn-secondary">HOME</button>
           <h1 className="logo-main">ai closet</h1>
         </header>
-        {/* <div>
-          <h3>今の天気は {weather}です。</h3>
-          <h3>今の気温は {this.props.temperature}&#176;</h3>
-        </div> */}
         <div id="main">
           <Swipeable className="full-height slide-nav" {...config}>
             <ul>
@@ -54,8 +50,6 @@ class App extends Component {
       </div>
     );
   }
-  /* <li key={menu.id} data={menu.data} /> */
-  //manipulates array of links and Names to move menu up
   pushShift = (array, x) => {
     array.push(array[x]);
     array.shift(array[x]);
@@ -68,7 +62,6 @@ class App extends Component {
   };
 
   //Handles menu movement by input of either "up" or "down" into (direction)
-
   handleMenu = direction => {
     let menuArray = menuText.slice();
     let spliceLinks = menuLinks.slice();
@@ -83,7 +76,6 @@ class App extends Component {
 
     // then updates the state
     menuText = menuArray;
-
     menuLinks = spliceLinks;
     this.setState({
       menuData: [
@@ -102,10 +94,3 @@ App.propTypes = {
 };
 
 export default App;
-
-// menuData: [
-//   { id: 1, data: <a href={links[0]}>{arr[0]}</a> },
-//   { id: 2, data: <a href="#">{arr[1]}</a> },
-//   { id: 3, data: <a href="#">{arr[2]}</a> },
-//   { id: 4, data: <a href="#">{arr[3]}</a> }
-// ];
