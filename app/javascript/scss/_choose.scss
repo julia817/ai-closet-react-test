@@ -13,10 +13,17 @@ main {
         height: 75vh;
 
 
+
         .items {
             justify-content: center;
             width: 99%;
             border: 1px solid $text-terciary;
+
+            .item-detailed {
+                width: 100%;
+                display: inherit;
+                flex-direction: row;
+            }
 
             .item-wrapper:nth-child(1) {
                 border-bottom: 1px solid $text-terciary;
@@ -33,29 +40,35 @@ main {
                 width: 100%;
 
 
+
                 .item {
                     width: 100%;
                     display: inherit;
                     align-items: center;
 
-                    .img-item {
-                        display: inherit;
-                        justify-content: center;
-                        width: 40%;
-
-                        img {
-                            width: 128px;
-                            height: 128px;
-                        }
-                    }
 
 
-                    h3 {
-                        @extend .font-26px;
-                        text-align: left;
-                        user-select: none;
+
+                }
+
+                .img-item {
+                    display: inherit;
+                    justify-content: center;
+                    width: 40%;
+
+                    img {
+                        width: 128px;
+                        height: 128px;
                     }
                 }
+
+
+                h3 {
+                    @extend .font-26px;
+                    text-align: left;
+                    user-select: none;
+                }
+
             }
         }
     }

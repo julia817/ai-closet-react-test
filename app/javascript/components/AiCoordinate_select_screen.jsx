@@ -5,6 +5,7 @@ class AiSelectedItems extends Component {
   state = {
     header: { where: "Back", link: "#" },
     comment: "猫好きですね！",
+    isDetailed: false,
     item: [
       {
         id: 1,
@@ -50,7 +51,12 @@ class AiSelectedItems extends Component {
           <h2 className="font-32px">{this.state.comment}</h2>
           <div className="items-div">
             {this.state.item.map(item => (
-              <Item key={item.id} itemName={item.itemName} image={item.image} />
+              <Item
+                key={item.id}
+                itemName={item.itemName}
+                image={item.image}
+                isDetailed={this.state.isDetailed}
+              />
             ))}
           </div>
         </main>
