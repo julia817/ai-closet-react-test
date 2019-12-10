@@ -1,13 +1,3 @@
-@keyframes totop {
-    from {
-        font-size: inherit;
-    }
-
-    to {
-        font-size: 60px;
-    }
-}
-
-.to-top {
-    transition: 0.3s
+.menu-transition {
+    transition: font-size 0.3s
 }

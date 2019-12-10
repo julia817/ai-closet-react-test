@@ -18,8 +18,16 @@ class App extends Component {
       { id: 2, data: menuText[1], link: "#" },
       { id: 3, data: menuText[2], link: "#" },
       { id: 4, data: menuText[3], link: "#" }
-    ]
+    ],
+    animate: false
   };
+
+  componentDidMount() {
+    // Added requestAnimationFrame
+    requestAnimationFrame(() => {
+      this.setState({ animate: true });
+    });
+  }
 
   render() {
     //Swipe gesture settings for menu calling the handleMenu function
@@ -42,7 +50,12 @@ class App extends Component {
           <Swipeable className="full-height slide-nav" {...config}>
             <ul>
               {this.state.menuData.map(menu => (
-                <Menu key={menu.id} data={menu.data} link={menu.link} />
+                <Menu
+                  key={menu.id}
+                  data={menu.data}
+                  link={menu.link}
+                  animate={this.state.animate}
+                />
               ))}
             </ul>
           </Swipeable>
@@ -77,13 +90,15 @@ class App extends Component {
     // then updates the state
     menuText = menuArray;
     menuLinks = spliceLinks;
+
     this.setState({
       menuData: [
         { id: 1, data: menuText[0], link: menuLinks[0] },
         { id: 2, data: menuText[1], link: "#" },
         { id: 3, data: menuText[2], link: "#" },
         { id: 4, data: menuText[3], link: "#" }
-      ]
+      ],
+      animate: false
     });
   };
 }
