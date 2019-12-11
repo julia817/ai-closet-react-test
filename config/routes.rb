@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  resources :bottoms
+  resources :tops
+  resources :onepieces
+  get 'choose/ai'
+  get 'choose/myself'
   resources :clothes
   get '*path', to: redirect('/'), constraints: lambda { |req|
     req.path.exclude? 'rails/active_storage'

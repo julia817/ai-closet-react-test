@@ -1,0 +1,19 @@
+<% if @bottom.image.attached? %>
+  <%= image_tag @bottom.image %>
+<% end %>
+
+<p>style: 
+  <% if @bottom.isCasual %>Casual<% end %> 
+  <% if @bottom.isBC %>Business Casual<% end %> 
+  <% if @bottom.isBusiness %>Business<% end %>
+</p>
+
+<p>color: <%= @bottom.color %></p>
+<p>type: <%= @bottom.type %></p>
+<p>sex: <%= @bottom.sex %></p>
+<p>seasons: 
+  <% if @bottom.isSpring %>Spring<% end %> 
+  <% if @bottom.isSummer %>Summer<% end %> 
+  <% if @bottom.isFall %>Fall<% end %> 
+  <% if @bottom.isWinter %>Winter<% end %> 
+</p>
