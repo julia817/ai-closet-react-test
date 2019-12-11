@@ -1,62 +1,55 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
 import { Swipeable } from "react-swipeable";
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
 
-let arr = ["Choose for me", "Let me choose", "Store", "Outfits"];
-let links = ["/AiCoordinate", "/LetMeChoose", "/Store", "/Outfits"];
+import Menu from "./components/menu";
+// Array declaration. I do it here for easier manipulationlet
+let menuText = ["Choose for me", "Let me choose", "Store", "Outfits"];
+let menuLinks = ["/AiCoordinate", "/LetMeChoose", "/Store", "/Outfits"];
+// App.propTypes = {
+//   weather: PropTypes.string,
+//   degree: PropTypes.string
+// };
 
 class App extends Component {
   state = {
-    menuArray: arr,
-    menuLinks: links
+    menuData: [
+      { id: 1, data: menuText[0], link: menuLinks[0] },
+      { id: 2, data: menuText[1], link: "#" },
+      { id: 3, data: menuText[2], link: "#" },
+      { id: 4, data: menuText[3], link: "#" }
+    ]
   };
 
   render() {
-    let links = this.state.menuLinks;
-    let names = this.state.menuArray;
-
-    //Swipe gesture settings for menu
+    //Swipe gesture settings for menu calling the handleMenu function
     const config = {
-      onSwipedUp: () => this.handleMenuUp(),
-      onSwipedDown: () => this.handleMenuDown(),
+      onSwipedUp: () => this.handleMenu("up"),
+      onSwipedDown: () => this.handleMenu("down"),
       preventDefaultTouchmoveEvent: true,
       trackMouse: true
     };
 
+    let weather = this.props.weather;
+
     return (
-      <React.Fragment>
+      <div className="body">
         <header>
           <button className="btn btn-secondary">HOME</button>
           <h1 className="logo-main">ai closet</h1>
         </header>
-        <div>
-          今の天気：{this.props.weather}
-          今の気温：{this.props.degree}℃
-        </div>
         <div id="main">
           <Swipeable className="full-height slide-nav" {...config}>
             <ul>
-              <li>
-                <Link to={links[0]}>{names[0]}</Link>
-              </li>
-              <li>
-                <Link to="">{names[1]}</Link>
-              </li>
-              <li>
-                <Link to="">{names[2]}</Link>
-              </li>
-              <li>
-                <Link to="">{names[3]}</Link>
-              </li>
+              {this.state.menuData.map(menu => (
+                <Menu key={menu.id} data={menu.data} link={menu.link} />
+              ))}
             </ul>
           </Swipeable>
         </div>
-      </React.Fragment>
+      </div>
     );
   }
-
-  //manipulates array of links and Names to move menu up
   pushShift = (array, x) => {
     array.push(array[x]);
     array.shift(array[x]);
@@ -68,32 +61,36 @@ class App extends Component {
     array.unshift(popItem);
   };
 
-  handleMenuUp = () => {
-    let menuArray = arr.slice();
-    let spliceLinks = links.slice();
-    this.pushShift(menuArray, 0);
-    this.pushShift(spliceLinks, 0);
-    links = spliceLinks;
-    arr = menuArray;
-    this.setState({ menuArray: arr, menuLinks: links });
-  };
+  //Handles menu movement by input of either "up" or "down" into (direction)
+  handleMenu = direction => {
+    let menuArray = menuText.slice();
+    let spliceLinks = menuLinks.slice();
+    if (direction === "up") {
+      this.pushShift(menuArray, 0);
+      this.pushShift(spliceLinks, 0);
+    }
+    if (direction === "down") {
+      this.popUnshift(menuArray);
+      this.popUnshift(spliceLinks);
+    }
 
-  handleMenuDown = () => {
-    let menuArray = arr.slice();
-    let spliceLinks = links.slice();
-    this.popUnshift(menuArray);
-    this.popUnshift(spliceLinks);
-
-    links = spliceLinks;
-    arr = menuArray;
-    this.setState({ menuArray: arr, menuLinks: links });
+    // then updates the state
+    menuText = menuArray;
+    menuLinks = spliceLinks;
+    this.setState({
+      menuData: [
+        { id: 1, data: menuText[0], link: menuLinks[0] },
+        { id: 2, data: menuText[1], link: "#" },
+        { id: 3, data: menuText[2], link: "#" },
+        { id: 4, data: menuText[3], link: "#" }
+      ]
+    });
   };
 }
 
 App.propTypes = {
-  weather: PropTypes.string,
-  degree: PropTypes.string
+  weather: PropTypes.string
+  // temperature: PropTypes.String
 };
-
 
 export default App;

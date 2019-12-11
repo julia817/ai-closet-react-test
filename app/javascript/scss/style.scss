@@ -3,6 +3,7 @@
 @import 'select';
 @import 'home';
 @import 'choose';
+@import 'animations';
 
 //html tags
 
@@ -11,7 +12,8 @@ html {
     box-sizing: border-box;
 }
 
-body {
+body,
+.body {
     height: 100vh;
     max-height: 1024px;
     width: 100%;

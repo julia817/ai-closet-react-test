@@ -35,6 +35,7 @@ $sizes: 11px,
 }
 
 @mixin a-tag-reset {
+    background: transparent;
     text-decoration: none;
     color: $text-primary;
 }
@@ -47,11 +48,14 @@ $sizes: 11px,
 }
 
 @mixin selected {
+    display: inline-block;
+
     transition: .3s;
     border-radius: 25px;
     background: $text-primary;
+    width: fit-content;
 
-    a {
+    li {
         opacity: 80%;
     }
 }

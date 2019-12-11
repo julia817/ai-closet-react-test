@@ -1,0 +1,13 @@
+@keyframes totop {
+    from {
+        font-size: inherit;
+    }
+
+    to {
+        font-size: 60px;
+    }
+}
+
+.to-top {
+    transition: 0.3s
+}

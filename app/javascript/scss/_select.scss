@@ -10,11 +10,14 @@
         justify-content: space-around;
 
         li {
-            padding: 8px 30px;
+            padding: 5px 30px;
+            width: inherit;
         }
 
         li:nth-child(2) {
             @extend .font-34px;
+            margin-top: 5px;
+            // @include reset-list;
             font-weight: 100;
         }
 
@@ -25,10 +28,16 @@
         li:nth-child(6) {
             @extend li:nth-child(2);
         }
+
+        li:nth-child(8) {
+            display: none;
+        }
     }
 
-    a {
+    button {
         @include reset-list;
+        width: fit-content;
+        font-weight: 400;
         @extend .font-28px;
         @include a-tag-reset;
         margin-top: 5px;
@@ -36,12 +45,12 @@
     }
 
 
-    a:hover {
+    .toggleOn {
         @include selected;
 
-        li {
-            color: white;
-        }
+
+        color: white !important;
+
     }
 
 }
