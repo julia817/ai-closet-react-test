@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_11_27_082636) do
+ActiveRecord::Schema.define(version: 2019_12_09_074013) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -33,9 +33,47 @@ ActiveRecord::Schema.define(version: 2019_11_27_082636) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "clothes", force: :cascade do |t|
-    t.string "type"
+  create_table "bottoms", force: :cascade do |t|
     t.string "color"
+    t.string "type"
+    t.string "sex"
+    t.boolean "isCasual"
+    t.boolean "isBC"
+    t.boolean "isBusiness"
+    t.boolean "isSpring"
+    t.boolean "isSummer"
+    t.boolean "isFall"
+    t.boolean "isWinter"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "onepieces", force: :cascade do |t|
+    t.string "color"
+    t.string "type"
+    t.string "sex"
+    t.boolean "isCasual"
+    t.boolean "isBC"
+    t.boolean "isBusiness"
+    t.boolean "isSpring"
+    t.boolean "isSummer"
+    t.boolean "isFall"
+    t.boolean "isWinter"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "tops", force: :cascade do |t|
+    t.string "color"
+    t.string "type"
+    t.string "sex"
+    t.boolean "isCasual"
+    t.boolean "isBC"
+    t.boolean "isBusiness"
+    t.boolean "isSpring"
+    t.boolean "isSummer"
+    t.boolean "isFall"
+    t.boolean "isWinter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
