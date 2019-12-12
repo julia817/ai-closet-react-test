@@ -3,31 +3,20 @@ import { Swipeable } from "react-swipeable";
 import PropTypes from "prop-types";
 
 import Menu from "./components/menu";
-// Array declaration. I do it here for easier manipulationlet
-let menuText = ["Choose for me", "Let me choose", "Store", "Outfits"];
-let menuLinks = ["/AiCoordinate", "/LetMeChoose", "/Store", "/Outfits"];
-// App.propTypes = {
-//   weather: PropTypes.string,
-//   degree: PropTypes.string
-// };
+let classArray = ["top-bottom", "two-top", "three-2", "four-3"];
+// this is the state object array: its declared here as it needs to be manipulated to add the movement of the
+let menuState = [
+  { id: 1, data: "Choose for me", link: "/AiCoordinate", class: classArray[0] },
+  { id: 2, data: "Let me choose", link: "/LetMeChoose", class: classArray[1] },
+  { id: 3, data: "Store", link: "/Store", class: classArray[2] },
+  { id: 4, data: "Outfits", link: "/Outfits", class: classArray[3] }
+];
 
 class App extends Component {
   state = {
-    menuData: [
-      { id: 1, data: menuText[0], link: menuLinks[0] },
-      { id: 2, data: menuText[1], link: "#" },
-      { id: 3, data: menuText[2], link: "#" },
-      { id: 4, data: menuText[3], link: "#" }
-    ],
+    menuData: menuState,
     animate: false
   };
-
-  componentDidMount() {
-    // Added requestAnimationFrame
-    requestAnimationFrame(() => {
-      this.setState({ animate: true });
-    });
-  }
 
   render() {
     //Swipe gesture settings for menu calling the handleMenu function
@@ -54,7 +43,7 @@ class App extends Component {
                   key={menu.id}
                   data={menu.data}
                   link={menu.link}
-                  animate={this.state.animate}
+                  class="menu-transition"
                 />
               ))}
             </ul>
@@ -76,29 +65,23 @@ class App extends Component {
 
   //Handles menu movement by input of either "up" or "down" into (direction)
   handleMenu = direction => {
-    let menuArray = menuText.slice();
-    let spliceLinks = menuLinks.slice();
+    let menuArray = this.state.menuData.slice();
+    let classSplice = classArray;
+
     if (direction === "up") {
       this.pushShift(menuArray, 0);
-      this.pushShift(spliceLinks, 0);
+      this.pushShift(classSplice, 0);
     }
     if (direction === "down") {
       this.popUnshift(menuArray);
-      this.popUnshift(spliceLinks);
+      this.popUnshift(classSplice);
     }
+    menuState = menuArray;
 
-    // then updates the state
-    menuText = menuArray;
-    menuLinks = spliceLinks;
-
+    classArray = classSplice;
+    console.log(menuState);
     this.setState({
-      menuData: [
-        { id: 1, data: menuText[0], link: menuLinks[0] },
-        { id: 2, data: menuText[1], link: "#" },
-        { id: 3, data: menuText[2], link: "#" },
-        { id: 4, data: menuText[3], link: "#" }
-      ],
-      animate: false
+      menuData: menuState
     });
   };
 }
