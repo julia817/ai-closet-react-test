@@ -37,6 +37,7 @@
             a {
                 margin-left: .8em;
                 color: $text-secondary;
+                pointer-events: none;
             }
         }
 
@@ -46,6 +47,7 @@
             a {
                 margin-left: .5em;
                 color: $text-terciary;
+                pointer-events: none;
             }
         }
 
@@ -54,6 +56,7 @@
 
             a {
                 color: $text-minimal;
+                pointer-events: none;
             }
         }
     }

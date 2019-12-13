@@ -1,13 +1,51 @@
-@keyframes totop {
-    from {
-        font-size: inherit;
+.menu-transition {
+    transition: font-size ease-out 0.5s;
+    transform-origin: center;
+}
+
+@keyframes top-bottom {
+    0% {
+        opacity: 1;
     }
 
-    to {
-        font-size: 60px;
+    100% {
+        transform: translate(-50px, 500px);
+        opacity: 0;
     }
 }
 
-.to-top {
-    transition: 0.3s
+@keyframes two-top {
+    0% {
+        font-size: inherit;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(30px, -100px);
+    }
+}
+
+@keyframes three-2 {
+    0% {
+        font-size: inherit;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(30px, -100px);
+    }
+}
+
+@keyframes four-3 {
+    0% {
+        font-size: inherit;
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+        transform: translate(30px, -100px);
+    }
 }
