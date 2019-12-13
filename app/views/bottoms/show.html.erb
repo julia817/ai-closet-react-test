@@ -1,6 +1,4 @@
-<% if @bottom.image.attached? %>
-  <%= image_tag @bottom.image %>
-<% end %>
+<%= link_to '新規追加', controller: 'bottoms', action: 'new' %>
 
 <p>style: 
   <% if @bottom.isCasual %>Casual<% end %> 
@@ -17,3 +15,7 @@
   <% if @bottom.isFall %>Fall<% end %> 
   <% if @bottom.isWinter %>Winter<% end %> 
 </p>
+
+<% if @bottom.image.attached? %>
+  <%= image_tag @bottom.image %>
+<% end %>

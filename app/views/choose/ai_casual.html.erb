@@ -1,0 +1,9 @@
+<h3>今日の気温：<%= @min_temp %>℃　～　<%= @max_temp %>℃</h3>
+
+<h1>AIが提案したコーディネート</h1>
+
+<h3>
+<% @clothes.each do |c| %>
+    <%= image_tag c.image, :size => '200x200' %>＋
+<% end %>
+</h3>
