@@ -1,7 +1,10 @@
 .menu-transition {
-    transition: font-size ease-out 0.5s;
-    transform-origin: center;
+    transition: font-size ease-out 0.4s;
+    transform-origin: left;
+
 }
+
+
 
 @keyframes top-bottom {
     0% {

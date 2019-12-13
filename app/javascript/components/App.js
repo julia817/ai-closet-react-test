@@ -3,13 +3,13 @@ import { Swipeable } from "react-swipeable";
 import PropTypes from "prop-types";
 
 import Menu from "./components/menu";
-let classArray = ["top-bottom", "two-top", "three-2", "four-3"];
+
 // this is the state object array: its declared here as it needs to be manipulated to add the movement of the
 let menuState = [
-  { id: 1, data: "Choose for me", link: "/AiCoordinate", class: classArray[0] },
-  { id: 2, data: "Let me choose", link: "/LetMeChoose", class: classArray[1] },
-  { id: 3, data: "Store", link: "/Store", class: classArray[2] },
-  { id: 4, data: "Outfits", link: "/Outfits", class: classArray[3] }
+  { id: 1, data: "Choose for me", link: "/AiCoordinate" },
+  { id: 2, data: "Let me choose", link: "/LetMeChoose" },
+  { id: 3, data: "Store", link: "/Store" },
+  { id: 4, data: "Outfits", link: "/Outfits" }
 ];
 
 class App extends Component {
@@ -39,12 +39,7 @@ class App extends Component {
           <Swipeable className="full-height slide-nav" {...config}>
             <ul>
               {this.state.menuData.map(menu => (
-                <Menu
-                  key={menu.id}
-                  data={menu.data}
-                  link={menu.link}
-                  class="menu-transition"
-                />
+                <Menu key={menu.id} data={menu.data} link={menu.link} />
               ))}
             </ul>
           </Swipeable>
@@ -66,20 +61,14 @@ class App extends Component {
   //Handles menu movement by input of either "up" or "down" into (direction)
   handleMenu = direction => {
     let menuArray = this.state.menuData.slice();
-    let classSplice = classArray;
+    direction === "up"
+      ? this.pushShift(menuArray, 0)
+      : direction === "down"
+      ? this.popUnshift(menuArray)
+      : null;
 
-    if (direction === "up") {
-      this.pushShift(menuArray, 0);
-      this.pushShift(classSplice, 0);
-    }
-    if (direction === "down") {
-      this.popUnshift(menuArray);
-      this.popUnshift(classSplice);
-    }
     menuState = menuArray;
 
-    classArray = classSplice;
-    console.log(menuState);
     this.setState({
       menuData: menuState
     });
