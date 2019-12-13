@@ -1,6 +1,4 @@
-<% if @onepiece.image.attached? %>
-  <%= image_tag @onepiece.image %>
-<% end %>
+<%= link_to '新規追加', controller: 'onepieces', action: 'new' %>
 
 <p>style: 
   <% if @onepiece.isCasual %>Casual<% end %> 
@@ -17,3 +15,7 @@
   <% if @onepiece.isFall %>Fall<% end %> 
   <% if @onepiece.isWinter %>Winter<% end %> 
 </p>
+
+<% if @onepiece.image.attached? %>
+  <%= image_tag @onepiece.image %>
+<% end %>

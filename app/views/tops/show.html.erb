@@ -1,6 +1,4 @@
-<% if @top.image.attached? %>
-  <%= image_tag @top.image %>
-<% end %>
+<%= link_to '新規追加', controller: 'tops', action: 'new' %>
 
 <p>style: 
   <% if @top.isCasual %>Casual<% end %> 
@@ -17,3 +15,7 @@
   <% if @top.isFall %>Fall<% end %> 
   <% if @top.isWinter %>Winter<% end %> 
 </p>
+
+<% if @top.image.attached? %>
+  <%= image_tag @top.image %>
+<% end %>
