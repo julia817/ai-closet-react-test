@@ -16,7 +16,7 @@ class Item extends Component {
               <img src={this.props.image} alt="" />
             </div>
             <h3>{this.state.itemName}</h3>
-            {this.props.isDetailed === true ? <h5>subtitle</h5> : ""}
+            {this.props.isDetailed === true ? <h5>{this.props.color}</h5> : ""}
           </div>
         </div>
       </div>

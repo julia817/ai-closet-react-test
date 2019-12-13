@@ -1,16 +1,19 @@
 import React, { Component } from "react";
 import LogoBackHead from "./components/Header_back_Logo";
 import Item from "./components/item";
+import PropTypes from "prop-types";
+
 class AiSelectedItems extends Component {
   state = {
     header: { where: "Back", link: "#" },
     comment: "猫好きですね！",
-    isDetailed: false,
+    isDetailed: true,
     item: [
       {
         id: 1,
-        itemName: "Test",
-        image: "http://lorempixel.com/output/cats-q-c-300-300-9.jpg"
+        itemName: this.props.clothes[0].type,
+        color: this.props.clothes[0].color,
+        image: this.props.clothes[0].image_url
       },
       {
         id: 2,
@@ -40,6 +43,9 @@ class AiSelectedItems extends Component {
     ]
   };
   render() {
+    const propClothe = this.props.clothes;
+    console.log(this.props.clothes);
+    console.log(this.props.imgUrl);
     return (
       <React.Fragment>
         <LogoBackHead
@@ -55,6 +61,7 @@ class AiSelectedItems extends Component {
                 key={item.id}
                 itemName={item.itemName}
                 image={item.image}
+                color={item.color}
                 isDetailed={this.state.isDetailed}
               />
             ))}
@@ -64,5 +71,9 @@ class AiSelectedItems extends Component {
     );
   }
 }
+App.propTypes = {
+  clothes: PropTypes.Array
+  // temperature: PropTypes.String
+};
 
 export default AiSelectedItems;

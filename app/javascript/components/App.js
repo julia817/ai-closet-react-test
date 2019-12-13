@@ -26,7 +26,8 @@ class App extends Component {
       preventDefaultTouchmoveEvent: true,
       trackMouse: true
     };
-
+    let propClothes = this.props.clothes;
+    console.log(propClothes);
     let weather = this.props.weather;
 
     return (
@@ -76,7 +77,7 @@ class App extends Component {
 }
 
 App.propTypes = {
-  weather: PropTypes.string
+  clothes: PropTypes.array
   // temperature: PropTypes.String
 };
 
