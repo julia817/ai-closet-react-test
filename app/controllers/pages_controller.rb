@@ -1,5 +1,5 @@
 class PagesController < ApplicationController
-  def index
+  def ai_final
       current = Weather.current
       
     # @current_weather = current["weather"][0]["description"]

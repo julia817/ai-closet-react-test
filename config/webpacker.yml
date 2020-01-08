@@ -10,8 +10,8 @@ default: &default
   webpack_compile_output: true
 
   # Additional paths webpack should lookup modules
-  # ['/node_modules/react-router-dom', 'node_modules/react-swipeable']
-  resolved_paths: []
+
+  resolved_paths: ["/ai-pages"]
 
   # Reload manifest.json on all requests so we reload latest compiled packs
   cache_manifest: false

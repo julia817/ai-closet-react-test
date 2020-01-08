@@ -30,7 +30,7 @@ class LetMeChoose extends Component {
           <span>|</span>
           <span className="tiles"></span>
         </div>
-        <main>
+        <main className="height-70px">
           <h1>Current Selected Items</h1>
           <div className="items">
             <p>No items selected</p>

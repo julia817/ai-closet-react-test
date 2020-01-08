@@ -1,12 +1,32 @@
 import React, { Component } from "react";
 import Item from "./components/item";
+import imageCasual from "../../assets/images/casual.jpg";
+import imageBizCas from "../../assets/images/businesscas.jpg";
+import imagesuit from "../../assets/images/suit.jpg";
+
+// importing routing pages
 
 class AiCoordinate extends Component {
   state = {
     item: [
-      { id: 1, itemName: "Casual", image: "#" },
-      { id: 2, itemName: "Business Casual", image: "#" },
-      { id: 3, itemName: "Formal", image: "#" }
+      {
+        id: 1,
+        itemName: "Casual",
+        image: imageCasual,
+        link: "/AiCoortinate-Casual"
+      },
+      {
+        id: 2,
+        itemName: "Business Casual",
+        image: imageBizCas,
+        link: "/AiCoortinate-BusinessCasual"
+      },
+      {
+        id: 3,
+        itemName: "Formal",
+        image: imagesuit,
+        link: "/AiCoortinate-Formal"
+      }
     ]
   };
   render() {
@@ -21,7 +41,12 @@ class AiCoordinate extends Component {
         <main>
           <div className="items-div">
             {this.state.item.map(item => (
-              <Item key={item.id} itemName={item.itemName} />
+              <Item
+                key={item.id}
+                itemName={item.itemName}
+                image={item.image}
+                link={item.link}
+              />
             ))}
           </div>
         </main>

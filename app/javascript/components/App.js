@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Swipeable } from "react-swipeable";
 import PropTypes from "prop-types";
-import Meta from "./components/Meta-tags";
+
 import Menu from "./components/menu";
 
 // this is the state object array: its declared here as it needs to be manipulated to add the movement of the

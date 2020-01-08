@@ -13,7 +13,16 @@ Rails.application.routes.draw do
   root 'pages#index'
   # match:'*path', to:'pages#index', via: :all
   get '/login', to: 'pages#login'
+
+
   get '/AiCoordinate', to:'pages#ai_choose'
+  get '/AiCoortinate-Casual', to:'pages#ai_casual'
+  get '/AiCoortinate-Formal', to:'pages#ai_formal'
+  get '/AiCoortinate-BusinessCasual', to:'pages#ai_business'
+  get '/AiCoordinate-finalSelection', to: 'pages#ai_final'
+
+
+
   get '/LetMeChoose', to:'pages#self_choose'
   get '/Outfits', to:'pages#outfits'
   get '/Store', to:'pages#store'

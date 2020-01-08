@@ -46,6 +46,21 @@ header {
   justify-content: space-between;
 }
 
+// main
+//this has settings for the list stuff
+main {
+  width: 80%;
+  height: 100%;
+
+  margin: auto;
+  @include display-flex-center;
+
+  .items {
+    height: max-content;
+    @include items;
+  }
+}
+
 //------------------------
 //logo
 
