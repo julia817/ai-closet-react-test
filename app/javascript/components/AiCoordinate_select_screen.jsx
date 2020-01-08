@@ -13,17 +13,19 @@ class AiSelectedItems extends Component {
         id: 1,
         itemName: this.props.clothes[0].type,
         color: this.props.clothes[0].color,
-        image: this.props.clothes[0].image_url
+        image: this.props.image[0]
       },
       {
         id: 2,
-        itemName: "aaa",
-        image: "http://lorempixel.com/output/cats-q-c-300-300-9.jpg"
+        itemName: this.props.clothes[1].type,
+        color: this.props.clothes[1].color,
+        image: this.props.image[1]
       },
       {
         id: 3,
-        itemName: "HogeHoge",
-        image: "http://lorempixel.com/output/cats-q-c-300-300-9.jpg"
+        iitemName: this.props.clothes[2].type,
+        color: this.props.clothes[2].color,
+        image: this.props.image[2]
       },
       {
         id: 4,
@@ -45,7 +47,7 @@ class AiSelectedItems extends Component {
   render() {
     const propClothe = this.props.clothes;
     console.log(this.props.clothes);
-    console.log(this.props.imgUrl);
+    console.log(this.props.image);
     return (
       <React.Fragment>
         <LogoBackHead
@@ -72,8 +74,8 @@ class AiSelectedItems extends Component {
   }
 }
 App.propTypes = {
-  clothes: PropTypes.Array
-  // temperature: PropTypes.String
+  clothes: PropTypes.Array,
+  image: PropTypes.Array
 };
 
 export default AiSelectedItems;

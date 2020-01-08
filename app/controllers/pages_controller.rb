@@ -6,7 +6,7 @@ class PagesController < ApplicationController
     # @current_degree = current["main"]["temp"]
     @max_temp = current["main"]["temp_max"]
     @min_temp = current["main"]["temp_min"]
-
+    @url = []
    @clothes = []
     # 女性の場合：ワンピースか上下か
     random = Random.new()
@@ -27,11 +27,14 @@ class PagesController < ApplicationController
         if isOP
           op = Onepiece.select('id').group('type').having('(isWinter=?) OR (isFall=?)', true, true).order("RANDOM()").limit(1)
           @clothes.push(Onepiece.find(op[0].id))
+          @url.push(Onepiece.find(op[0].id).image_url)
         else
           top1 = Top.select('id').group('type').having('(type=? OR type=?)', 'sweater', 'hoodie').order("RANDOM()").limit(1)
           bottom = Bottom.select('id').group('type').having('(isWinter=?) OR (isFall=?)', true, true).order("RANDOM()").limit(1)
           @clothes.push(Top.find(top1[0].id))
           @clothes.push(Bottom.find(bottom[0].id))
+          @url.push(Top.find(top1[0].id).image_url)
+          @url.push(Bottom.find(bottom[0].id).image_url)
         end
         if @min_temp <=13
           top2 = Top.select('id').group('type').having('(isWinter=?) AND (type=?)', true, 'outer').order("RANDOM()").limit(1)
@@ -39,7 +42,7 @@ class PagesController < ApplicationController
         end
       end
    
-  # render json: @clothes, methods: :image_url
+  #  render json: @url
   
   end
 

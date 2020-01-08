@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { Swipeable } from "react-swipeable";
 import PropTypes from "prop-types";
-
+import Meta from "./components/Meta-tags";
 import Menu from "./components/menu";
 
 // this is the state object array: its declared here as it needs to be manipulated to add the movement of the
@@ -31,9 +31,12 @@ class App extends Component {
     let weather = this.props.weather;
 
     return (
+      // <Meta />
       <div className="body">
         <header>
-          <button className="btn btn-secondary">HOME</button>
+          <a href="">
+            <button className="btn btn-secondary">HOME</button>
+          </a>
           <h1 className="logo-main">ai closet</h1>
         </header>
         <div id="main">

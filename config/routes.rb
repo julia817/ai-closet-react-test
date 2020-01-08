@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   root 'pages#index'
   # match:'*path', to:'pages#index', via: :all
-
+  get '/login', to: 'pages#login'
   get '/AiCoordinate', to:'pages#ai_choose'
   get '/LetMeChoose', to:'pages#self_choose'
   get '/Outfits', to:'pages#outfits'

@@ -1,70 +1,64 @@
 .top-nav {
+  ul {
+    @include reset-list;
+    margin: 1em;
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
 
-
-    ul {
-        @include reset-list;
-        margin: 1em;
-        margin-top: 5px;
-        display: flex;
-        flex-direction: row;
-        justify-content: space-around;
-
-        li {
-            padding: 5px 30px;
-            width: inherit;
-        }
-
-        li:nth-child(2) {
-            @extend .font-34px;
-            margin-top: 5px;
-            // @include reset-list;
-            font-weight: 100;
-        }
-
-        li:nth-child(4) {
-            @extend li:nth-child(2);
-        }
-
-        li:nth-child(6) {
-            @extend li:nth-child(2);
-        }
-
-        li:nth-child(8) {
-            display: none;
-        }
+    li {
+      padding: 5px 30px;
+      width: inherit;
     }
 
-    button {
-        @include reset-list;
-        width: fit-content;
-        font-weight: 400;
-        @extend .font-28px;
-        @include a-tag-reset;
-        margin-top: 5px;
-
+    li:nth-child(2) {
+      @extend .font-34px;
+      margin-top: 5px;
+      // @include reset-list;
+      font-weight: 100;
     }
 
-
-    .toggleOn {
-        @include selected;
-
-
-        color: white !important;
-
+    li:nth-child(4) {
+      @extend li:nth-child(2);
     }
 
+    li:nth-child(6) {
+      @extend li:nth-child(2);
+    }
+
+    li:nth-child(8) {
+      display: none;
+    }
+  }
+
+  button {
+    @include reset-list;
+    width: fit-content;
+    font-weight: 400;
+    @extend .font-28px;
+    @include a-tag-reset;
+    margin-top: 5px;
+  }
+
+  .toggleOn {
+    @include selected;
+
+    color: white !important;
+  }
 }
 
 // main
 
 main {
-    width: 80%;
-    height: 90%;
-    margin: auto;
-    @include display-flex-center;
+  width: 80%;
+  height: 70%;
 
-    .items {
-        height: max-content;
-        @include items;
-    }
+  margin: auto;
+  @include display-flex-center;
+
+  .items {
+    height: max-content;
+    @include items;
+  }
 }

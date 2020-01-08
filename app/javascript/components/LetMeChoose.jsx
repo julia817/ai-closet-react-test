@@ -37,8 +37,8 @@ class LetMeChoose extends Component {
           </div>
         </main>
         <nav className="bottom-nav">
-          <a href="/" className="btn-back">
-            Back
+          <a href="/">
+            <button className="btn-back">Back</button>
           </a>
         </nav>
       </div>
