@@ -68,6 +68,7 @@ $sizes: 11px,
 @mixin display-flex-center {
     display: flex;
     align-items: center;
+    justify-content: flex-start;
     flex-direction: column;
 }
 

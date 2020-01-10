@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-
+import SelectionPage from "./components/ai_selection";
+import imagesuit from "../../assets/images/suit.jpg";
 class Formal_Selection extends Component {
-  state = {};
   render() {
-    return <h2>So formal</h2>;
+    return <SelectionPage clotheItem={imagesuit} title="Formal" />;
   }
 }
 

@@ -6,21 +6,23 @@ class Item extends Component {
   render() {
     return (
       <div className="items">
-        <div className="item-wrapper">
-          <div
-            className={
-              this.props.isDetailed === true ? "item-detailed" : "item"
-            }
-          >
-            <a href={this.props.link}>
+        <a href={this.props.link}>
+          <div className="item-wrapper">
+            <div
+              className={
+                this.props.isDetailed === true ? "item-detailed" : "item"
+              }
+            >
               <div className="img-item">
                 <img src={this.props.image} alt={this.props.itemName} />
               </div>
-            </a>
-            <h3>{this.state.itemName}</h3>
-            {this.props.isDetailed === true ? <h5>{this.props.color}</h5> : ""}
+              <div>
+                <h3>{this.state.itemName}</h3>
+                <h5>{this.props.color}</h5>
+              </div>
+            </div>
           </div>
-        </div>
+        </a>
       </div>
     );
   }

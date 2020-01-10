@@ -13,19 +13,19 @@ class AiCoordinate extends Component {
         id: 1,
         itemName: "Casual",
         image: imageCasual,
-        link: "/AiCoortinate-Casual"
+        link: "/AiCoordinate-Casual"
       },
       {
         id: 2,
         itemName: "Business Casual",
         image: imageBizCas,
-        link: "/AiCoortinate-BusinessCasual"
+        link: "/AiCoordinate-BusinessCasual"
       },
       {
         id: 3,
         itemName: "Formal",
         image: imagesuit,
-        link: "/AiCoortinate-Formal"
+        link: "/AiCoordinate-Formal"
       }
     ]
   };

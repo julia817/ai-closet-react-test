@@ -5,8 +5,7 @@ import PropTypes from "prop-types";
 
 class AiSelectedItems extends Component {
   state = {
-    header: { where: "Back", link: "#" },
-    comment: "猫好きですね！",
+    comment: "今日のコーディネート",
     isDetailed: true,
     item: [
       {
@@ -50,10 +49,7 @@ class AiSelectedItems extends Component {
     console.log(this.props.image);
     return (
       <React.Fragment>
-        <LogoBackHead
-          where={this.state.header.where}
-          link={this.state.header.link}
-        />
+        <LogoBackHead where="Refresh" link="/AiCoordinate-finalSelection" />
 
         <main>
           <h2 className="font-32px">{this.state.comment}</h2>

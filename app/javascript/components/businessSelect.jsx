@@ -1,9 +1,10 @@
 import React, { Component } from "react";
+import SelectionPage from "./components/ai_selection";
+import imageBizCas from "../../assets/images/businesscas.jpg";
 
 class Business_Select extends Component {
-  state = {};
   render() {
-    return <h2>much select</h2>;
+    return <SelectionPage clotheItem={imageBizCas} title="Business Casual" />;
   }
 }
 

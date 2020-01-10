@@ -14,11 +14,12 @@ Rails.application.routes.draw do
   # match:'*path', to:'pages#index', via: :all
   get '/login', to: 'pages#login'
 
-
+# AiCoordinateページのルート設定
   get '/AiCoordinate', to:'pages#ai_choose'
-  get '/AiCoortinate-Casual', to:'pages#ai_casual'
-  get '/AiCoortinate-Formal', to:'pages#ai_formal'
-  get '/AiCoortinate-BusinessCasual', to:'pages#ai_business'
+  get '/AiCoordinate-Casual', to:'pages#ai_casual'
+  get '/AiCoordinate-Formal', to:'pages#ai_formal'
+  get '/AiCoordinate-BusinessCasual', to:'pages#ai_business'
+  get '/AiCoordinate-Check', to: 'pages#ai_rentOrBuyCheck'
   get '/AiCoordinate-finalSelection', to: 'pages#ai_final'
 
 
