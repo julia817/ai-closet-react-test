@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_12_09_074013) do
+ActiveRecord::Schema.define(version: 2020_01_10_091939) do
 
   create_table "active_storage_attachments", force: :cascade do |t|
     t.string "name", null: false
@@ -61,6 +61,21 @@ ActiveRecord::Schema.define(version: 2019_12_09_074013) do
     t.boolean "isWinter"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "patterns", force: :cascade do |t|
+    t.string "sex"
+    t.string "type1"
+    t.string "color1"
+    t.string "type2"
+    t.string "color2"
+    t.string "type3"
+    t.string "color3"
+    t.string "type4"
+    t.string "color4"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string "style"
   end
 
   create_table "tops", force: :cascade do |t|
