@@ -42,6 +42,9 @@ class ChooseController < ApplicationController
 
     # 雨の場合：防水靴、レインブーツ
     # elsif current["weather"][0]["id"] < 600
+
+      puts 'レインブーツ'
+
     # 雪の場合：滑りにくい靴
     # else
     # end
