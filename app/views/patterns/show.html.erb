@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <%= link_to '新規追加', controller: 'patterns', action: 'new' %>
 
 <p>sex: <%= @pattern.sex %></p>
@@ -15,22 +14,4 @@
     <%= image_tag image, :size=>"200x250" %>
   <% end %>
 <% end %>
-=======
-<%= link_to '新規追加', controller: 'patterns', action: 'new' %>
-
-<p>sex: <%= @pattern.sex %></p>
-<p>style: <%= @pattern.style %></p>
-
-<p>color1: <%= @pattern.color1 %> type1: <%= @pattern.type1 %></p>
-<p>color2: <%= @pattern.color2 %> type2: <%= @pattern.type2 %></p>
-<p>color3: <%= @pattern.color3 %> type3: <%= @pattern.type3 %></p>
-<p>color4: <%= @pattern.color4 %> type4: <%= @pattern.type4 %></p>
-
-<p>
-<% if @pattern.images.attached? %>
-  <% @pattern.images.each do |image| %>
-    <%= image_tag image, :size=>"200x250" %>
-  <% end %>
-<% end %>
->>>>>>> 928748193c531e16c6149ae049fe0b79483d2f07
 </p>
