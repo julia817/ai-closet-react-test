@@ -1,0 +1,24 @@
+<%= form_with model: @pattern, local: true  do |p| %>
+    <div>
+        <%= p.radio_button(:sex, "f") %> Female
+        <%= p.radio_button(:sex, "m") %> Male
+    </div> 
+
+    <div>
+        <p>Style <%= p.text_field :style %></p>
+    </div>
+
+    <%= p.file_field :images, multiple: true %><br>
+
+    <p>Type1 <%= p.text_field :type1 %></p>
+    <p>Color1 <%= p.text_field :color1 %></p>
+    <p>Type2 <%= p.text_field :type2 %></p>
+    <p>Color2 <%= p.text_field :color2 %></p>
+    <p>Type3 <%= p.text_field :type3 %></p>
+    <p>Color3 <%= p.text_field :color3 %></p>
+    <p>Type4 <%= p.text_field :type4 %></p>
+    <p>Color4 <%= p.text_field :color4 %></p>
+
+    <%= p.submit %>
+
+<% end %>

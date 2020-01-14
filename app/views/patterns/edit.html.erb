@@ -1,0 +1,34 @@
+<%= form_with model: @pattern, local: true  do |p| %>
+    <div>
+        <%= p.radio_button(:sex, "f") %> Female
+        <%= p.radio_button(:sex, "m") %> Male
+    </div> 
+
+    <div>
+        <p>Style <%= p.text_field :style %></p>
+    </div>
+
+    <div>
+        <p>現在登録されている画像（削除するものはチェックしてください）<br>
+        <% @pattern.images.each do |image| %>
+            <%= p.check_box :image_ids, {:multiple => true}, image.id, false %>
+            <%= image_tag image, :size=>"100x150" %>
+        <% end %>
+        </p>
+        <p>修正画像追加<br>
+        <%= p.file_field :images, multiple: true %>
+        </p>
+    </div>
+
+    <p>Type1 <%= p.text_field :type1 %></p>
+    <p>Color1 <%= p.text_field :color1 %></p>
+    <p>Type2 <%= p.text_field :type2 %></p>
+    <p>Color2 <%= p.text_field :color2 %></p>
+    <p>Type3 <%= p.text_field :type3 %></p>
+    <p>Color3 <%= p.text_field :color3 %></p>
+    <p>Type4 <%= p.text_field :type4 %></p>
+    <p>Color4 <%= p.text_field :color4 %></p>
+
+    <%= p.submit %>
+
+<% end %>
