@@ -1,6 +1,7 @@
 class Onepiece < ApplicationRecord
     has_one_attached :image
     self.inheritance_column = :_type_disabled
+<<<<<<< HEAD
 
 
 
@@ -11,4 +12,6 @@ class Onepiece < ApplicationRecord
     nil
   end
 end
+=======
+>>>>>>> 928748193c531e16c6149ae049fe0b79483d2f07
 end
