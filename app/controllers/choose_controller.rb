@@ -45,6 +45,8 @@ class ChooseController < ApplicationController
 
       puts 'レインブーツ'
 
+      puts 'レインブーツ'
+
     # 雪の場合：滑りにくい靴
     # else
     # end
