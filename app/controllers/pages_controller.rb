@@ -49,9 +49,16 @@ class PagesController < ApplicationController
   def self_choose
   end
 
-  def ai_choose
-  end
+  def ai_casual
 
+
+    @pattern1 = [Pattern.all]
+  #  @pattern1.push(Pattern.find(Pattern.all).image_url)
+    
+   
+    
+
+  end
   def outfits
   end
 
