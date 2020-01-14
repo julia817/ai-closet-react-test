@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <table>
     <tr>
         <th>ID</th>
@@ -21,4 +22,29 @@
             <% if c.isBusiness %><%= formal %><br><% end %>
         </td>
     <% end %>
+=======
+<table>
+    <tr>
+        <th>ID</th>
+        <th>IMAGE</th>
+        <th>SEX</th>
+        <th>TYPE</th>
+        <th>COLOR</th>
+        <th>STYLE</th>
+        <th>SEASON</th>
+        <th>EDIT</th>
+    </tr>
+    <% @tops.each do |t| %>
+        <td><%= c.id%></td>
+        <td><%= image_tag c.image, :size => '200x200' %></td>
+        <td><%= c.sex %>
+        <td><%= c.type %>
+        <td><%= c.color %>
+        <td>
+            <% if c.isCasual %><%= casual %><br><% end %>
+            <% if c.isBC %><%= business casual %><br><% end %>
+            <% if c.isBusiness %><%= formal %><br><% end %>
+        </td>
+    <% end %>
+>>>>>>> 928748193c531e16c6149ae049fe0b79483d2f07
 </table>

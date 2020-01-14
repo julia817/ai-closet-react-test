@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <% @patterns.each do |p| %>
     <p>
     ID: <%= p.id %>    <%= link_to "EDIT", "/patterns/#{p.id}/edit" %>
@@ -17,4 +18,25 @@
     </p>
     <hr>
 <% end %>
+=======
+<% @patterns.each do |p| %>
+    <p>
+    ID: <%= p.id %>    <%= link_to "EDIT", "/patterns/#{p.id}/edit" %>
+    <br>
+    SEX: <%= p.sex %>   SYLTE: <%= p.style %>
+    <br>
+    Color1: <%= p.color1 %>   Type1: <%= p.type1 %><br>
+    Color2: <%= p.color2 %>   Type2: <%= p.type2 %><br>
+    Color3: <%= p.color3 %>   Type3: <%= p.type3 %><br>
+    Color4: <%= p.color4 %>   Type4: <%= p.type4 %>
+    <br>
+    <% if p.images.attached? %>
+        <% p.images.each do |image| %>
+            <%= image_tag image, :size=>"200x250" %>
+        <% end %>
+    <% end %>
+    </p>
+    <hr>
+<% end %>
+>>>>>>> 928748193c531e16c6149ae049fe0b79483d2f07
     
