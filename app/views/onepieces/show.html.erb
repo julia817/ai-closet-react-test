@@ -1,0 +1,21 @@
+<%= link_to '新規追加', controller: 'onepieces', action: 'new' %>
+
+<p>style: 
+  <% if @onepiece.isCasual %>Casual<% end %> 
+  <% if @onepiece.isBC %>Business Casual<% end %> 
+  <% if @onepiece.isBusiness %>Business<% end %>
+</p>
+
+<p>color: <%= @onepiece.color %></p>
+<p>type: <%= @onepiece.type %></p>
+<p>sex: <%= @onepiece.sex %></p>
+<p>seasons: 
+  <% if @onepiece.isSpring %>Spring<% end %> 
+  <% if @onepiece.isSummer %>Summer<% end %> 
+  <% if @onepiece.isFall %>Fall<% end %> 
+  <% if @onepiece.isWinter %>Winter<% end %> 
+</p>
+
+<% if @onepiece.image.attached? %>
+  <%= image_tag @onepiece.image %>
+<% end %>

@@ -1,0 +1,21 @@
+<%= link_to '新規追加', controller: 'tops', action: 'new' %>
+
+<p>style: 
+  <% if @top.isCasual %>Casual<% end %> 
+  <% if @top.isBC %>Business Casual<% end %> 
+  <% if @top.isBusiness %>Business<% end %>
+</p>
+
+<p>color: <%= @top.color %></p>
+<p>type: <%= @top.type %></p>
+<p>sex: <%= @top.sex %></p>
+<p>seasons: 
+  <% if @top.isSpring %>Spring<% end %> 
+  <% if @top.isSummer %>Summer<% end %> 
+  <% if @top.isFall %>Fall<% end %> 
+  <% if @top.isWinter %>Winter<% end %> 
+</p>
+
+<% if @top.image.attached? %>
+  <%= image_tag @top.image %>
+<% end %>
