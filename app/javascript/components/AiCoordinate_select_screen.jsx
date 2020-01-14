@@ -47,6 +47,7 @@ class AiSelectedItems extends Component {
     const propClothe = this.props.clothes;
     console.log(this.props.clothes);
     console.log(this.props.image);
+
     return (
       <React.Fragment>
         <LogoBackHead where="Refresh" link="/AiCoordinate-finalSelection" />

@@ -9,7 +9,7 @@ main {
 
     .items-large {
 
-        height: 70%;
+        height: 77%;
         display: flex;
         flex-direction: column;
         width: 70%;
@@ -25,7 +25,11 @@ main {
 
         .img-item-large {
             display: inherit;
-
+            animation-name: fade-in-slow;
+            animation-duration: 0.7s;
+            animation-iteration-count: 1;
+            // animation-fill-mode: forwards;
+            animation-timing-function: ease-out;
             width: max-content;
 
 
@@ -103,6 +107,11 @@ main {
                     display: inherit;
                     justify-content: center;
                     width: 40%;
+                    animation-name: fade-in-slow;
+                    animation-duration: 0.7s;
+                    animation-iteration-count: 1;
+                    // animation-fill-mode: forwards;
+                    animation-timing-function: ease-in;
 
                     img {
                         width: 128px;
