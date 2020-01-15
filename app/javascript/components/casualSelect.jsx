@@ -9,7 +9,7 @@ class Select_Casual extends Component {
     console.log(this.props.Images);
     return (
       <SelectionPage
-        clotheItem={imageCasual}
+        clotheItem={this.props.Images}
         title="Casual"
         link="/AiCoordinate-Check"
       />
@@ -18,7 +18,7 @@ class Select_Casual extends Component {
 }
 Select_Casual.propTypes = {
   Data: PropTypes.array,
-  Images: PropTypes.array
+  Images: PropTypes.object
   // temperature: PropTypes.String
 };
 export default Select_Casual;
