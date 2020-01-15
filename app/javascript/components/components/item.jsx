@@ -17,7 +17,7 @@ class Item extends Component {
                 <img src={this.props.image} alt={this.props.itemName} />
               </div>
               <div>
-                <h3>{this.state.itemName}</h3>
+                <h3>{this.props.itemName}</h3>
                 <h5>{this.props.color}</h5>
               </div>
             </div>
