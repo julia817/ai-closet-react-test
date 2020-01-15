@@ -1,191 +1,280 @@
 body {
-    width: 95% !important;
-    margin: auto;
+  width: 95% !important;
+  margin: auto;
 }
 
+// Bordered Items
 main {
-    margin-top: -2em;
+  margin-top: -2em;
+  justify-content: center;
+
+  .items-sml {
+    height: 70vh;
+    background: transparent;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 auto;
+    width: 75%;
+    align-items: center;
     justify-content: center;
+    border: 1px solid $text-terciary;
 
-    .items-sml {
+    h2 {
+      padding: 0 0 30px 0;
+      margin: 0;
+      width: 100%;
+      text-align: center;
+      flex-grow: 3;
+    }
 
-        height: 77%;
-        display: flex;
-        flex-wrap: wrap;
+    .img-item-sml {
+      display: inherit;
+      flex-basis: auto;
+      margin: 0 10px;
+      animation-name: fade-in-slow;
+      animation-duration: 0.7s;
+      animation-iteration-count: 1;
+      // animation-fill-mode: forwards;
+      animation-timing-function: ease-out;
+
+      width: max-content;
+
+      img {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+
+  .items-div {
+    overflow-y: scroll;
+    width: 70%;
+    height: 55vw;
+
+    a {
+      border: none !important;
+    }
+
+    a,
+    .items {
+      color: $text-primary;
+      justify-content: center;
+      width: 99%;
+      border: 1px solid $text-terciary;
+
+      h5 {
+        display: none;
+      }
+
+      .item-detailed {
+        width: 100%;
+        display: inherit;
         flex-direction: row;
-        width: 70%;
-        align-items: center;
-        justify-content: center;
-        border: 1px solid $text-terciary;
 
-        h2 {
-            padding: 0 0 30px 0;
-            margin: 0;
-            width: 100%;
-            text-align: center;
-            flex-grow: 3;
+        h3 {
+          display: block;
+          margin: 0;
         }
 
-
-        .img-item-sml {
-            display: inherit;
-            flex-basis: auto;
-            margin: 0 10px;
-            animation-name: fade-in-slow;
-            animation-duration: 0.7s;
-            animation-iteration-count: 1;
-            // animation-fill-mode: forwards;
-            animation-timing-function: ease-out;
-
-            width: max-content;
-
-
-            img {
-                width: 200px;
-                height: 200px;
-            }
+        h5 {
+          display: block;
+          margin-top: 5px;
         }
+      }
+
+      .item-wrapper:nth-child(1) {
+        border-bottom: 1px solid $text-terciary;
+      }
+
+      .item-wrapper:nth-child(2) {
+        border-bottom: 1px solid $text-terciary;
+      }
+
+      .item-wrapper {
+        display: flex;
+        padding: 1em 0;
+        width: 100%;
+
+        .item {
+          width: 100%;
+          display: inherit;
+          align-items: center;
+        }
+
+        .img-item {
+          display: inherit;
+          justify-content: center;
+          width: 40%;
+          animation-name: fade-in-slow;
+          animation-duration: 0.7s;
+          animation-iteration-count: 1;
+          // animation-fill-mode: forwards;
+          animation-timing-function: ease-in;
+
+          img {
+            width: 128px;
+            height: 128px;
+          }
+        }
+
+        h3 {
+          @extend .font-26px;
+          text-align: left;
+          user-select: none;
+        }
+      }
+    }
+  }
+}
+
+// borderless items
+// used for the final check page
+main {
+  .items-div-borderless {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    width: 80%;
+    height: 60vw;
+
+    a {
+      border: none !important;
     }
 
-    .items-div {
-        overflow-y: scroll;
-        width: 70%;
-        height: 70vw;
+    a,
+    .items-borderless {
+      color: $text-primary;
+      justify-content: center;
+      width: 99%;
 
-        a {
-            border: none !important;
+      h5 {
+        display: none;
+      }
+
+      .item-detailed {
+        width: 100%;
+        display: inherit;
+        flex-direction: row;
+        align-content: flex-end;
+
+        h3 {
+          display: block;
+          margin: 0;
+          text-transform: capitalize;
         }
 
-        a,
-        .items {
-            color: $text-primary;
-            justify-content: center;
-            width: 99%;
-            border: 1px solid $text-terciary;
-
-            h5 {
-                display: none;
-            }
-
-
-            .item-detailed {
-                width: 100%;
-                display: inherit;
-                flex-direction: row;
-
-                h3 {
-                    display: block;
-                    margin: 0;
-                }
-
-                h5 {
-                    display: block;
-                    margin-top: 5px;
-                }
-            }
-
-            .item-wrapper:nth-child(1) {
-                border-bottom: 1px solid $text-terciary;
-            }
-
-            .item-wrapper:nth-child(2) {
-                border-bottom: 1px solid $text-terciary;
-            }
-
-
-            .item-wrapper {
-                display: flex;
-                padding: 1em 0;
-                width: 100%;
-
-
-
-                .item {
-                    width: 100%;
-                    display: inherit;
-                    align-items: center;
-
-
-
-
-                }
-
-                .img-item {
-                    display: inherit;
-                    justify-content: center;
-                    width: 40%;
-                    animation-name: fade-in-slow;
-                    animation-duration: 0.7s;
-                    animation-iteration-count: 1;
-                    // animation-fill-mode: forwards;
-                    animation-timing-function: ease-in;
-
-                    img {
-                        width: 128px;
-                        height: 128px;
-                    }
-                }
-
-
-
-
-                h3 {
-                    @extend .font-26px;
-                    text-align: left;
-                    user-select: none;
-                }
-
-            }
+        h5 {
+          display: block;
+          margin-top: 5px;
+          text-transform: capitalize;
         }
+
+        .piece {
+          width: 20%;
+          margin: auto 0;
+        }
+      }
+
+      .item-wrapper-borderless {
+        display: flex;
+        padding: 1em 0;
+
+        .item {
+          width: 100%;
+          display: inherit;
+          align-items: center;
+        }
+
+        .img-item {
+          display: inherit;
+          justify-content: center;
+          width: 40%;
+          animation-name: fade-in-slow;
+          animation-duration: 0.7s;
+          animation-iteration-count: 1;
+          // animation-fill-mode: forwards;
+          animation-timing-function: ease-in;
+
+          img {
+            width: 200px;
+            height: 200px;
+          }
+        }
+
+        h3 {
+          @extend .font-26px;
+          text-align: left;
+          user-select: none;
+        }
+      }
     }
+  }
 }
 
 // check page settings
 
 .checkBorder {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    flex-direction: column;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
 
+  border: 1px solid $text-terciary;
+  height: 60%;
+  width: 60%;
+
+  h2 {
+    text-align: center;
+    margin-bottom: 3em;
+  }
+
+  a {
+    align-self: flex-end;
+    margin: 2em 2em 0 0;
+
+    button {
+      width: 100px;
+    }
+  }
+
+  #border-change {
+    display: inherit;
+    justify-content: center;
+    flex-direction: column;
+    height: max-content;
+    width: max-content;
+  }
+
+  #border-change span {
+    padding: 0 10px;
     border: 1px solid $text-terciary;
-    height: 60%;
-    width: 60%;
+    background: $text-minimal;
+  }
+
+  #border-change input:checked ~ span {
+    border: 1px solid #95c8da;
+  }
+
+  #border-change input[type="checkbox"] {
+    display: inline-block;
+    margin: 1em 10px 1em 0;
+  }
+}
+
+// suit tensou page
+
+.main-img {
+  .img-wrapper {
+    height: 500px;
+    width: 500px;
 
     h2 {
-        text-align: center;
-        margin-bottom: 3em;
+      text-align: center;
     }
 
-    a {
-        align-self: flex-end;
-        margin: 2em 2em 0 0;
-
-        button {
-            width: 100px;
-        }
+    img {
+      height: inherit;
+      width: inherit;
     }
-
-    #border-change {
-        display: inherit;
-        justify-content: center;
-        flex-direction: column;
-        height: max-content;
-        width: max-content;
-    }
-
-    #border-change span {
-        padding: 0 10px;
-        border: 1px solid $text-terciary;
-        background: $text-minimal;
-    }
-
-    #border-change input:checked~span {
-        border: 1px solid #95C8DA;
-    }
-
-    #border-change input[type=checkbox] {
-        display: inline-block;
-        margin: 1em 10px 1em 0;
-    }
+  }
 }

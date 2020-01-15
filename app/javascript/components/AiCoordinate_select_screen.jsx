@@ -1,62 +1,58 @@
 import React, { Component } from "react";
 import LogoBackHead from "./components/Header_back_Logo";
-import Item from "./components/item";
+import Item from "./components/item-borderless";
 import PropTypes from "prop-types";
-
+//
 class AiSelectedItems extends Component {
   state = {
     comment: "今日のコーディネート",
-    isDetailed: true,
-    item: [
+    isDetailed: true
+  };
+  render() {
+    console.log(this.props.Data);
+    let propData = this.props.Data[1];
+    let Images = this.props.Images;
+
+    let Data = [
       {
         id: 1,
-        itemName: this.props.clothes[0].type,
-        color: this.props.clothes[0].color,
-        image: this.props.image[0]
+        itemGenre: "Top",
+        itemName: propData.type1,
+        color: propData.color1,
+        image: Images[4]
       },
       {
         id: 2,
-        itemName: this.props.clothes[1].type,
-        color: this.props.clothes[1].color,
-        image: this.props.image[1]
+        itemGenre: "Bottom",
+        itemName: propData.type2,
+        color: propData.color2,
+        image: Images[5]
       },
       {
         id: 3,
-        iitemName: this.props.clothes[2].type,
-        color: this.props.clothes[2].color,
-        image: this.props.image[2]
+        itemGenre: "Outer",
+        itemName: propData.type3,
+        color: propData.color3,
+        image: Images[6]
       },
       {
         id: 4,
-        itemName: "Test",
-        image: "http://lorempixel.com/output/cats-q-c-300-300-9.jpg"
-      },
-      {
-        id: 5,
-        itemName: "aaa",
-        image: "http://lorempixel.com/output/cats-q-c-300-300-9.jpg"
-      },
-      {
-        id: 6,
-        itemName: "HogeHoge",
-        image: "http://lorempixel.com/output/cats-q-c-300-300-9.jpg"
+        itemGenre: "Shoes",
+        itemName: propData.type4,
+        color: propData.color4,
+        image: Images[7]
       }
-    ]
-  };
-  render() {
-    const propClothe = this.props.clothes;
-    console.log(this.props.clothes);
-    console.log(this.props.image);
-
+    ];
     return (
       <React.Fragment>
-        <LogoBackHead where="Refresh" link="/AiCoordinate-finalSelection" />
+        <LogoBackHead where="Back" link="/AiCoordinate-Casual" />
 
         <main>
-          <h2 className="font-32px">{this.state.comment}</h2>
-          <div className="items-div">
-            {this.state.item.map(item => (
+          <h2 className="font-36px">{this.state.comment}</h2>
+          <div className="items-div-borderless">
+            {Data.map(item => (
               <Item
+                itemGenre={item.itemGenre}
                 key={item.id}
                 itemName={item.itemName}
                 image={item.image}
@@ -65,6 +61,10 @@ class AiSelectedItems extends Component {
               />
             ))}
           </div>
+
+          <a href="/AiCoordinate-SuitTensou" className="confirmation-button">
+            <button className="btn-primary">確定</button>
+          </a>
         </main>
       </React.Fragment>
     );
