@@ -12,6 +12,6 @@ class Pattern < ApplicationRecord
             nil
         end
         # TEST
-        # puts urls
+        puts urls
     end
 end

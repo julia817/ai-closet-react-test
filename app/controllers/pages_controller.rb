@@ -55,15 +55,10 @@ class PagesController < ApplicationController
     @patterns = Pattern.all
     @images = []
     @patterns.each do |p|
-      @images.push(Pattern.find(p.id).image_urls)
-      # TEST
-      # puts "pattern:"
-      # puts Pattern.find(p.id)
-      # puts "***"
-      # Pattern.find(p.id).image_urls.each do |u|
-      #   puts u
-      # end
-      puts Pattern.find(1).image_urls
+      p.images.each do |i|
+        url = Rails.application.routes.url_helpers.rails_blob_path(i, only_path: true)
+        @images.push(url)
+      end
     end
   end
 
