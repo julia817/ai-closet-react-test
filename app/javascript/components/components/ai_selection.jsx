@@ -9,9 +9,24 @@ class Selection extends Component {
       <div className="body">
         <Head where="Back" link="AiCoordinate" />
         <main>
-          <div className="items-large">
+          <div className="items-sml">
             <h2 className="font-34px">{this.props.title}</h2>
-            <div className="img-item-large">
+            <div className="img-item-sml">
+              <a href={this.props.link}>
+                <img src={this.props.clotheItem}></img>
+              </a>
+            </div>
+            <div className="img-item-sml">
+              <a href={this.props.link}>
+                <img src={this.props.clotheItem}></img>
+              </a>
+            </div>
+            <div className="img-item-sml">
+              <a href={this.props.link}>
+                <img src={this.props.clotheItem}></img>
+              </a>
+            </div>
+            <div className="img-item-sml">
               <a href={this.props.link}>
                 <img src={this.props.clotheItem}></img>
               </a>

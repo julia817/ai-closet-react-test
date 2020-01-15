@@ -6,6 +6,7 @@ class Select_Casual extends Component {
   state = {};
   render() {
     console.log(this.props.Data);
+    console.log(this.props.Images);
     return (
       <SelectionPage
         clotheItem={imageCasual}
@@ -15,5 +16,9 @@ class Select_Casual extends Component {
     );
   }
 }
-
+Select_Casual.propTypes = {
+  Data: PropTypes.array,
+  Images: PropTypes.array
+  // temperature: PropTypes.String
+};
 export default Select_Casual;

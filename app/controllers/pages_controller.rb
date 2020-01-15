@@ -52,13 +52,21 @@ class PagesController < ApplicationController
   def ai_casual
 
 
-    @pattern1 = [Pattern.all]
-  #  @pattern1.push(Pattern.find(Pattern.all).image_url)
-    
-   
-    
-
+    @pattern1 = Pattern.all
+    @images = []
+    @pattern1.each do |p|
+      @images.push(Pattern.find(p.id).image_urls)
+      # TEST
+      # puts "pattern:"
+      # puts Pattern.find(p.id)
+      # puts "***"
+      # Pattern.find(p.id).image_urls.each do |u|
+      #   puts u
+      # end
+      puts Pattern.find(1).image_urls
+    end
   end
+
   def outfits
   end
 
