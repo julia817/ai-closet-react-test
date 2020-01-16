@@ -28,7 +28,16 @@ class AiController < ApplicationController
 
     def casual
         @patterns = Pattern.all
-        @images = img_urls(@patterns)
+        # @images = img_urls(@patterns)
+        @images = []
+        @patterns.each do |p|
+            urls = []
+            p.images.each do |i|
+                url = Rails.application.routes.url_helpers.rails_blob_path(i, only_path: true)
+                urls.push(url)
+            end
+            @images.push(urls)
+        end
     end
 
     def casual_female
@@ -72,6 +81,7 @@ class AiController < ApplicationController
                 end
                 images.push(urls)
             end
+            return images
         end
 end    
     
