@@ -16,14 +16,20 @@ Rails.application.routes.draw do
   get '/login', to: 'pages#login'
 
 # AiCoordinateページのルート設定
-  get '/AiCoordinate', to:'pages#ai_choose'
-  get '/AiCoordinate-Casual', to:'pages#ai_casual'
-  get '/AiCoordinate-Formal', to:'pages#ai_formal'
-  get '/AiCoordinate-BusinessCasual', to:'pages#ai_business'
-  get '/AiCoordinate-Check', to: 'pages#ai_rentOrBuyCheck'
-  get '/AiCoordinate-finalSelection', to: 'pages#ai_final'
-  get '/AiCoordinate-SuitTensou', to: 'pages#ai_sendtosuit'
-  get '/AiCoordinate-Complete', to: 'pages#ai_complete'
+  get '/AiCoordinate', to:'ai#choose'
+  get '/AiCoordinate-Casual-Female', to: 'ai#casual_female'
+  get '/AiCoordinate-Casual-Male', to: 'ai#casual_male'
+  get '/AiCoordinate-BusinessCasual-Female', to: 'ai#bc_female'
+  get '/AiCoordinate-BusinessCasual-Male', to: 'ai#bc_male'
+  get '/AiCoordinate-Formal-Female', to: 'ai#formal_female'
+  get '/AiCoordinate-Formal-Male', to: 'ai#formal_male'
+  get '/AiCoordinate-Casual', to:'ai#casual'
+  get '/AiCoordinate-Formal', to:'ai#formal'
+  get '/AiCoordinate-BusinessCasual', to:'ai#business'
+  get '/AiCoordinate-Check', to: 'ai#rentOrBuyCheck'
+  get '/AiCoordinate-finalSelection', to: 'ai#final'
+  get '/AiCoordinate-SuitTensou', to: 'ai#sendtosuit'
+  get '/AiCoordinate-Complete', to: 'ai#complete'
 
 
 
