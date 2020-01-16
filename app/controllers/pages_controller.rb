@@ -64,18 +64,38 @@ class PagesController < ApplicationController
 
 
   def ai_casual
-
-
     @patterns = Pattern.all
-    @images = []
-    @patterns.each do |p|
-      urls = []
-      p.images.each do |i|
-        url = Rails.application.routes.url_helpers.rails_blob_path(i, only_path: true)
-        urls.push(url)
-      end
-      @images.push(urls)
-    end
+    @images = img_urls(@patterns)
+  end
+
+  def ai_casual_female
+    @patterns = Pattern.where(sex: "f").where(style: "casual")
+    @images = img_urls(@patterns)
+  end
+
+  def ai_casual_male
+    @patterns = Pattern.where(sex: "m").where(style: "casual")
+    @images = img_urls(@patterns)
+  end
+
+  def ai_bc_female
+    @patterns = Pattern.where(sex: "f").where(syle: "bc")
+    @images = img_urls(@patterns)
+  end
+
+  def ai_bc_male
+    @patterns = Pattern.where(sex: "m").where(style: "bc")
+    @images = img_urls(@patterns)
+  end
+
+  def ai_formal_female
+    @patterns = Pattern.where(sex: "f").where(style: "formal")
+    @images = img_urls(@patterns)
+  end
+
+  def ai_formal_male
+    @patterns = Pattern.where(sex: "m").where(style: "formal")
+    @images = img_urls(@patterns)
   end
 
   def outfits
@@ -83,4 +103,17 @@ class PagesController < ApplicationController
 
   def store
   end
+
+
+  private
+    def img_urls patterns
+      images = []
+      patterns.each do |p|
+        urls = []
+        p.images.each do |i|
+          url = Rails.application.routes.url_helpers.rails_blob_path(i, only_path: true)
+          urls.push(url)
+        end
+        images.push(urls)
+    end
 end
