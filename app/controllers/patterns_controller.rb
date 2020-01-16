@@ -18,9 +18,11 @@ class PatternsController < ApplicationController
 
     def update
         @pattern = Pattern.find(params[:id])
-        params[:pattern][:image_ids].each do |image_id|
-            image = @pattern.images.find(image_id)
-            image.purge
+        if !params[:pattern][:image_ids].nil?
+            params[:pattern][:image_ids].each do |image_id|
+                image = @pattern.images.find(image_id)
+                image.purge
+            end
         end
         @pattern.update(pattern_params)
         redirect_to @pattern

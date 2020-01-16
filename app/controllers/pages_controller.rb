@@ -55,10 +55,12 @@ class PagesController < ApplicationController
     @patterns = Pattern.all
     @images = []
     @patterns.each do |p|
+      urls = []
       p.images.each do |i|
         url = Rails.application.routes.url_helpers.rails_blob_path(i, only_path: true)
-        @images.push(url)
+        urls.push(url)
       end
+      @images.push(urls)
     end
   end
 
