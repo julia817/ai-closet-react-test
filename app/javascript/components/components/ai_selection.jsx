@@ -3,7 +3,7 @@ import Head from "./Header_back_Logo";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 class Selection extends Component {
-  state = {};
+  state = { images: this.props.images };
 
   render() {
     return (
@@ -13,57 +13,132 @@ class Selection extends Component {
           <Carousel showStatus={false}>
             <div>
               <div className="items-sml">
-                <h2 className="font-34px">{this.props.title1}</h2>
+                <h2 className="font-34px">{this.props.title} 1</h2>
                 <div className="img-item-sml">
                   <a href={this.props.link}>
-                    <img src={this.props.itemOne}></img>
+                    <img src={this.props.page1[0]}></img>
                   </a>
                 </div>
                 <div className="img-item-sml">
                   <a href={this.props.link}>
-                    <img src={this.props.itemTwo}></img>
+                    <img src={this.props.page1[1]}></img>
                   </a>
                 </div>
                 <div className="img-item-sml">
                   <a href={this.props.link}>
-                    <img src={this.props.itemThree}></img>
+                    <img src={this.props.page1[2]}></img>
                   </a>
                 </div>
                 <div className="img-item-sml">
                   <a href={this.props.link}>
-                    <img src={this.props.itemFour}></img>
+                    <img src={this.props.page1[3]}></img>
                   </a>
                 </div>
               </div>
             </div>
             <div>
               <div className="items-sml">
-                <h2 className="font-34px">{this.props.title2}</h2>
+                <h2 className="font-34px">{this.props.title} 2</h2>
                 <div className="img-item-sml">
                   <a href={this.props.link}>
-                    <img src={this.props.item5}></img>
+                    <img src={this.props.page2[0]}></img>
                   </a>
                 </div>
                 <div className="img-item-sml">
                   <a href={this.props.link}>
-                    <img src={this.props.item6}></img>
+                    <img src={this.props.page2[1]}></img>
                   </a>
                 </div>
                 <div className="img-item-sml">
                   <a href={this.props.link}>
-                    <img src={this.props.item7}></img>
+                    <img src={this.props.page2[2]}></img>
                   </a>
                 </div>
                 <div className="img-item-sml">
                   <a href={this.props.link}>
-                    <img src={this.props.item8}></img>
+                    <img src={this.props.page2[3]}></img>
                   </a>
                 </div>
               </div>
             </div>
             <div>
-              <img src={this.props.itemThree} />
-              <p className="legend">Legend 3</p>
+              <div className="items-sml">
+                <h2 className="font-34px">{this.props.title} 3</h2>
+                <div className="img-item-sml">
+                  <a href={this.props.link}>
+                    <img src={this.props.page3[0]}></img>
+                  </a>
+                </div>
+                <div className="img-item-sml">
+                  <a href={this.props.link}>
+                    <img src={this.props.page3[1]}></img>
+                  </a>
+                </div>
+                <div className="img-item-sml">
+                  <a href={this.props.link}>
+                    <img src={this.props.page3[2]}></img>
+                  </a>
+                </div>
+                <div className="img-item-sml">
+                  <a href={this.props.link}>
+                    <img src={this.props.page3[3]}></img>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="items-sml">
+                <h2 className="font-34px">{this.props.title} 4</h2>
+                <div className="img-item-sml">
+                  <a href={this.props.link}>
+                    <img src={this.props.page4[0]}></img>
+                  </a>
+                </div>
+                <div className="img-item-sml">
+                  <a href={this.props.link}>
+                    <img src={this.props.page4[1]}></img>
+                  </a>
+                </div>
+                <div className="img-item-sml">
+                  <a href={this.props.link}>
+                    <img src={this.props.page4[2]}></img>
+                  </a>
+                </div>
+                <div className="img-item-sml">
+                  <a href={this.props.link}>
+                    <img src={this.props.page4[3]}></img>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div className="items-sml">
+                <h2 className="font-34px">{this.props.title} 5</h2>
+                <div className="img-item-sml">
+                  <a href={this.props.link}>
+                    <img src={this.props.page5[0]}></img>
+                  </a>
+                </div>
+                <div className="img-item-sml">
+                  <a href={this.props.link}>
+                    <img src={this.props.page5[1]}></img>
+                  </a>
+                </div>
+                <div className="img-item-sml">
+                  <a href={this.props.link}>
+                    <img src={this.props.page5[2]}></img>
+                  </a>
+                </div>
+                <div className="img-item-sml">
+                  <a href={this.props.link}>
+                    <img src={this.props.page5[3]}></img>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div>
+              <img className="none" src="assets/6.jpeg" />
+              <p className="none">Legend 6</p>
             </div>
           </Carousel>
         </main>

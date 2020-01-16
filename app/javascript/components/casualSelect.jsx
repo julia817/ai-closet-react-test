@@ -7,25 +7,20 @@ class Select_Casual extends Component {
   state = {};
   render() {
     console.log(this.props.Data);
-    let images = [
-      this.props.Images[0],
-      this.props.Images[1],
-      this.props.Images[2],
-      this.props.Images[3]
-    ];
-
+    console.log(this.props.Images);
+    const coordinateOne = this.props.Images[0];
+    const coordinateTwo = this.props.Images[1];
+    const coordinateThree = this.props.Images[2];
+    const coordinateFour = this.props.Images[3];
+    const coordinateFive = this.props.Images[4];
     return (
       <SelectionPage
-        itemOne={images[0]}
-        itemTwo={images[1]}
-        itemThree={images[2]}
-        itemFour={images[3]}
-        item5={this.props.Images[4]}
-        item6={this.props.Images[5]}
-        item7={this.props.Images[6]}
-        item8={this.props.Images[7]}
-        title1="Coordinate 1"
-        title2="Coordinate 2"
+        page1={coordinateOne}
+        page2={coordinateTwo}
+        page3={coordinateThree}
+        page4={coordinateFour}
+        page5={coordinateFive}
+        title="Coordinate"
         link="/AiCoordinate-Check"
       />
     );
