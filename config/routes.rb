@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   get '/AiCoordinate-BusinessCasual', to:'pages#ai_business'
   get '/AiCoordinate-Check', to: 'pages#ai_rentOrBuyCheck'
   get '/AiCoordinate-finalSelection', to: 'pages#ai_final'
+  get '/AiCoordinate-SuitTensou', to: 'pages#ai_sendtosuit'
+  get '/AiCoordinate-Complete', to: 'pages#ai_complete'
 
 
 

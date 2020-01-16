@@ -49,6 +49,20 @@ class PagesController < ApplicationController
   def self_choose
   end
 
+  def ai_final
+
+
+    @patterns = Pattern.all
+    @images = []
+    @patterns.each do |p|
+      p.images.each do |i|
+        url = Rails.application.routes.url_helpers.rails_blob_path(i, only_path: true)
+        @images.push(url)
+      end
+    end
+  end
+
+
   def ai_casual
 
 
