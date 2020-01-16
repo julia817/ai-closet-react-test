@@ -1,12 +1,14 @@
 body {
   width: 95% !important;
   margin: auto;
+  overflow: hidden;
 }
 
 // Bordered Items
 main {
   margin-top: -2em;
   justify-content: center;
+
 
   .items-sml {
     height: 70vh;
@@ -15,7 +17,7 @@ main {
     flex-wrap: wrap;
     flex-direction: row;
     margin: 0 auto;
-    width: 75%;
+    width: 55%;
     align-items: center;
     justify-content: center;
     border: 1px solid $text-terciary;
@@ -251,7 +253,7 @@ main {
     background: $text-minimal;
   }
 
-  #border-change input:checked ~ span {
+  #border-change input:checked~span {
     border: 1px solid #95c8da;
   }
 

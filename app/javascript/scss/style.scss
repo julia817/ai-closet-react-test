@@ -14,13 +14,15 @@ html {
   box-sizing: border-box;
 }
 
+
+
 body,
 .body {
   height: 100vh;
   max-height: 1024px;
   width: 100%;
   max-width: 1366px;
-  // overflow: hidden;
+  overflow: hidden;
   animation-name: fade-in;
   animation-duration: 0.5s;
   animation-iteration-count: 1;
@@ -65,6 +67,12 @@ main {
     @include items;
   }
 }
+
+.none {
+  display: none;
+}
+
+
 
 //------------------------
 //logo
@@ -261,3 +269,58 @@ main {
 .slide {
   background: none !important;
 }
+
+.kagami-tensou {
+  display: none;
+}
+
+// // mirror settings
+// @media (min-width: 1050px) {
+//   // header {
+//   //   display: none;
+//   // }
+
+//   // main {
+//   //   display: none !important;
+//   // }
+
+//   .kagami-tensou {
+//     display: block !important;
+//     margin: 0;
+//     padding: 0;
+//     width: 100vw;
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center;
+//     align-items: center;
+
+//     /* ここでウエブカメラを立てで表示するためのtransform */
+//     transform: rotate(180deg);
+
+//     img {
+//       z-index: 999;
+//       position: absolute;
+//     }
+
+//     .border-red {
+//       border: 1px solid red;
+//       width: fit-content;
+//     }
+
+//     .top {
+//       width: 350px;
+//       height: 350px;
+//       right: 500px;
+//       /* 服が立てになる */
+//       transform: rotate(90deg);
+//     }
+
+//     .bottom {
+//       width: 230px;
+//       height: 400px;
+//       left: 360px;
+//       /* 服が立てになる */
+//       transform: rotate(90deg);
+//     }
+//   }
+// }

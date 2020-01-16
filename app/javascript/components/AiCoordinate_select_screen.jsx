@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import LogoBackHead from "./components/Header_back_Logo";
 import Item from "./components/item-borderless";
+import Top from "../../assets/images/coordinates/f_casual/2/1.png";
+import Bottom from "../../assets/images/coordinates/f_casual/2/2.png";
 import PropTypes from "prop-types";
 //
 class AiSelectedItems extends Component {
@@ -43,6 +45,15 @@ class AiSelectedItems extends Component {
         image: Images[7]
       }
     ];
+
+    function startVideo() {
+      navigator.getUserMedia(
+        { video: {} },
+        stream => (video.srcObject = stream),
+        err => console.error(err)
+      );
+    }
+
     return (
       <React.Fragment>
         <LogoBackHead where="Back" link="/AiCoordinate-Casual" />
@@ -66,6 +77,19 @@ class AiSelectedItems extends Component {
             <button className="btn-primary">確定</button>
           </a>
         </main>
+
+        {/* <div className="kagami-tensou">
+          <img id="top" className="top " src={Top} alt="" />
+          <img id="bottom" className="bottom " src={Bottom} alt="" />
+          <video
+            {...startVideo()}
+            id="video"
+            width="1080"
+            height="1920"
+            autoplay
+            muted
+          ></video>
+        </div> */}
       </React.Fragment>
     );
   }
