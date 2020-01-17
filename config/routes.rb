@@ -27,7 +27,18 @@ Rails.application.routes.draw do
   get '/AiCoordinate-Formal', to:'ai#formal'
   get '/AiCoordinate-BusinessCasual', to:'ai#business'
   get '/AiCoordinate-Check', to: 'ai#rentOrBuyCheck'
-  get '/AiCoordinate-finalSelection', to: 'ai#final'
+  
+  get '/AiCoordinate-finalSelection-w-c1', to: 'ai#final_w_c1'
+  get '/AiCoordinate-finalSelection-w-c2', to: 'ai#final_w_c2'
+  get '/AiCoordinate-finalSelection-w-c3', to: 'ai#final_w_c3'
+  get '/AiCoordinate-finalSelection-w-c4', to: 'ai#final_w_c4'
+  get '/AiCoordinate-finalSelection-w-c5', to: 'ai#final_w_c5'
+
+    get '/AiCoordinate-finalSelection-m-c1', to: 'ai#final_m_c1'
+  get '/AiCoordinate-finalSelection-m-c2', to: 'ai#final_m_c2'
+  get '/AiCoordinate-finalSelection-m-c3', to: 'ai#final_m_c3'
+  get '/AiCoordinate-finalSelection-m-c4', to: 'ai#final_m_c4'
+  get '/AiCoordinate-finalSelection-m-c5', to: 'ai#final_m_c5'
   get '/AiCoordinate-SuitTensou', to: 'ai#sendtosuit'
   get '/AiCoordinate-Complete', to: 'ai#complete'
 

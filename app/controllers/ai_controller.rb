@@ -1,15 +1,4 @@
 class AiController < ApplicationController
-    def final
-        @patterns = Pattern.all
-        @images = []
-        @patterns.each do |p|
-            p.images.each do |i|
-            url = Rails.application.routes.url_helpers.rails_blob_path(i, only_path: true)
-            @images.push(url)
-            end
-        end
-    end
-
     def choose
     end
 
@@ -69,6 +58,57 @@ class AiController < ApplicationController
         @patterns = Pattern.where(sex: "m").where(style: "formal")
         @images = img_urls(@patterns)
     end
+
+    def final_w_c1 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_c2 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_c3 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_c4 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_c5 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_m_c1 
+        @patterns = @patterns = Pattern.where(sex: "m").where(style: "casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_m_c2 
+        @patterns = @patterns = Pattern.where(sex: "m").where(style: "casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_m_c3 
+        @patterns = @patterns = Pattern.where(sex: "m").where(style: "casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_m_c4 
+        @patterns = @patterns = Pattern.where(sex: "m").where(style: "casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_m_c5 
+        @patterns = @patterns = Pattern.where(sex: "m").where(style: "casual")
+        @images = img_urls(@patterns)
+    end
+
 
     private
         def img_urls patterns

@@ -11,9 +11,8 @@ class AiSelectedItems extends Component {
     isDetailed: true
   };
   render() {
-    console.log(this.props.Data);
-    let propData = this.props.Data[1];
-    let Images = this.props.Images;
+    let propData = this.props.Data[this.props.Query];
+    let Images = this.props.Images[this.props.Query];
 
     let Data = [
       {
@@ -21,28 +20,28 @@ class AiSelectedItems extends Component {
         itemGenre: "Top",
         itemName: propData.type1,
         color: propData.color1,
-        image: Images[4]
+        image: Images[0]
       },
       {
         id: 2,
         itemGenre: "Bottom",
         itemName: propData.type2,
         color: propData.color2,
-        image: Images[5]
+        image: Images[1]
       },
       {
         id: 3,
         itemGenre: "Outer",
         itemName: propData.type3,
         color: propData.color3,
-        image: Images[6]
+        image: Images[2]
       },
       {
         id: 4,
         itemGenre: "Shoes",
         itemName: propData.type4,
         color: propData.color4,
-        image: Images[7]
+        image: Images[3]
       }
     ];
 
@@ -54,9 +53,14 @@ class AiSelectedItems extends Component {
       );
     }
 
+    let Gender = this.props.Gender;
+
     return (
       <React.Fragment>
-        <LogoBackHead where="Back" link="/AiCoordinate-Casual" />
+        <LogoBackHead
+          where="Back"
+          link={"/AiCoordinate-Casual-" + Gender + ""}
+        />
 
         <main>
           <h2 className="font-36px">{this.state.comment}</h2>
