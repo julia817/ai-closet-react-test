@@ -6,9 +6,6 @@ import PropTypes from "prop-types";
 class Select_Casual extends Component {
   state = {};
   render() {
-    console.log(this.props.Gender);
-    console.log(this.props.Images);
-
     let Gender = this.props.Gender;
     const coordinateOne = this.props.Images[0];
     const coordinateTwo = this.props.Images[1];
@@ -18,6 +15,13 @@ class Select_Casual extends Component {
 
     return (
       <SelectionPage
+        headLink={
+          this.props.Gender === "m"
+            ? "/AiCoordinate-Male"
+            : this.props.Gender === "w"
+            ? "/AiCoordinate-Female"
+            : null
+        }
         page1={coordinateOne}
         page2={coordinateTwo}
         page3={coordinateThree}

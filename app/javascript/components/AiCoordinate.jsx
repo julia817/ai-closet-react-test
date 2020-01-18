@@ -3,33 +3,37 @@ import Item from "./components/item";
 import imageCasual from "../../assets/images/casual.jpg";
 import imageBizCas from "../../assets/images/businesscas.jpg";
 import imagesuit from "../../assets/images/suit.jpg";
-
+import imageCasualFemale from "../../assets/images/coordinates/f_casual/1/1.jpg";
+import imageBizCasFemale from "../../assets/images/businesscasf.jpg";
+import imagesuitFemale from "../../assets/images/suitf.jpg";
 // importing routing pages
 
 class AiCoordinate extends Component {
-  state = {
-    item: [
+  render() {
+    let Gender = this.props.Gender;
+
+    let item = [
       {
         id: 1,
         itemName: "Casual",
-        image: imageCasual,
-        link: "/AiCoordinate-Casual-Female"
+        image: Gender === "Female" ? imageCasualFemale : imageCasual,
+        link: "/AiCoordinate-Casual-" + Gender
       },
       {
         id: 2,
         itemName: "Business Casual",
-        image: imageBizCas,
-        link: "/AiCoordinate-BusinessCasua-Female"
+        image: Gender === "Female" ? imageBizCasFemale : imageBizCas,
+        link: "/AiCoordinate-BusinessCasual-" + Gender
       },
       {
         id: 3,
         itemName: "Formal",
-        image: imagesuit,
-        link: "/AiCoordinate-Formal-Female"
+        image: Gender === "Female" ? imagesuitFemale : imagesuit,
+        link: "/AiCoordinate-Formal-" + Gender
       }
-    ]
-  };
-  render() {
+    ];
+
+    const genderChange = {};
     return (
       <div className="body">
         <header>
@@ -40,7 +44,7 @@ class AiCoordinate extends Component {
         </header>
         <main>
           <div className="items-div">
-            {this.state.item.map(item => (
+            {item.map(item => (
               <Item
                 key={item.id}
                 itemName={item.itemName}

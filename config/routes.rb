@@ -15,8 +15,12 @@ Rails.application.routes.draw do
   # match:'*path', to:'pages#index', via: :all
   get '/login', to: 'pages#login'
 
-# AiCoordinateページのルート設定
-  get '/AiCoordinate', to:'ai#choose'
+# AiCoordinateページのルート設定\
+
+  # temporary male or female page for miraisouzou
+  get '/AiCoordinate-GenderCheck', to: 'ai#ai_male_or_female'
+  get '/AiCoordinate-Female', to:'ai#choose_w'
+  get '/AiCoordinate-Male', to:'ai#choose_m'
   get '/AiCoordinate-Casual-Female', to: 'ai#casual_female'
   get '/AiCoordinate-Casual-Male', to: 'ai#casual_male'
   get '/AiCoordinate-BusinessCasual-Female', to: 'ai#bc_female'
@@ -44,6 +48,8 @@ Rails.application.routes.draw do
 
 
 
+
+  get 'test', to: 'pages#test'
   get '/LetMeChoose', to:'pages#self_choose'
   get '/Outfits', to:'pages#outfits'
   get '/Store', to:'pages#store'

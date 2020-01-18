@@ -1,14 +1,56 @@
 body {
   width: 95% !important;
   margin: auto;
-  overflow: hidden;
 }
 
 // Bordered Items
 main {
-  margin-top: -2em;
+  // margin-top: -2em;
   justify-content: center;
 
+
+  //gender settings
+  .genderLink {
+    color: $text-primary;
+    border: 1px solid $text-terciary;
+    display: inline-block;
+    width: 49%
+  }
+
+  .sidebyside {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    h2 {
+      width: 100%;
+      margin-top: 5px;
+      text-align: center;
+
+    }
+
+    .items-div {
+      height: max-content;
+      width: 100%;
+
+
+      .img-item {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        img {
+          width: 350px;
+          height: 350px;
+        }
+      }
+    }
+
+  }
+
+  ////
 
   .items-sml {
     height: 70vh;
@@ -107,6 +149,7 @@ main {
         .img-item {
           display: inherit;
           justify-content: center;
+
           width: 40%;
           animation-name: fade-in-slow;
           animation-duration: 0.7s;
@@ -137,7 +180,7 @@ main {
     overflow-y: scroll;
     overflow-x: hidden;
     width: 80%;
-    height: 60vw;
+    height: 40vw;
 
     a {
       border: none !important;
@@ -187,10 +230,15 @@ main {
           align-items: center;
         }
 
+        .details {
+          width: 40%;
+        }
+
         .img-item {
           display: inherit;
           justify-content: center;
-          width: 40%;
+          align-items: center;
+          width: 200px;
           animation-name: fade-in-slow;
           animation-duration: 0.7s;
           animation-iteration-count: 1;
@@ -272,6 +320,10 @@ main {
 
     h2 {
       text-align: center;
+    }
+
+    h2:nth-child(2) {
+      margin-bottom: -49px;
     }
 
     img {

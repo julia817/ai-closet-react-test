@@ -9,11 +9,16 @@ let menuClasses = [".men-tran-0", ".men-tran-1", ".men-tran-2", ".men-tran-3"];
 let menuState = [
   {
     id: 1,
-    data: "Choose for me",
-    link: "/AiCoordinate",
+    data: "Ai coordinate",
+    link: "/AiCoordinate-GenderCheck",
     class: menuClasses[1]
   },
-  { id: 2, data: "Let me choose", link: "/LetMeChoose", class: menuClasses[2] },
+  {
+    id: 2,
+    data: "Self coordinate",
+    link: "/LetMeChoose",
+    class: menuClasses[2]
+  },
   { id: 3, data: "Store", link: "/Store", class: menuClasses[3] },
   { id: 4, data: "Outfits", link: "/Outfits", class: menuClasses[4] }
 ];

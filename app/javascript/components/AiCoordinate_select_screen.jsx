@@ -1,8 +1,8 @@
 import React, { Component } from "react";
 import LogoBackHead from "./components/Header_back_Logo";
 import Item from "./components/item-borderless";
-import Top from "../../assets/images/coordinates/f_casual/2/1.png";
-import Bottom from "../../assets/images/coordinates/f_casual/2/2.png";
+import Top from "../../assets/images/coordinates/f_casual/4/3.png";
+import Bottom from "../../assets/images/coordinates/f_casual/4/2.png";
 import PropTypes from "prop-types";
 //
 class AiSelectedItems extends Component {
@@ -88,9 +88,9 @@ class AiSelectedItems extends Component {
           <video
             {...startVideo()}
             id="video"
-            width="1080"
-            height="1920"
-            autoplay
+            width="1920"
+            height="1080"
+            autoPlay
             muted
           ></video>
         </div> */}

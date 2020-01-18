@@ -3,12 +3,13 @@ import Head from "./Header_back_Logo";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 class Selection extends Component {
-  state = { images: this.props.images };
+  state = { images: this.props.Images };
 
   render() {
+    console.log(this.props.Gender);
     return (
       <div className="body">
-        <Head where="Back" link="AiCoordinate" />
+        <Head where="Back" link={this.props.headLink} />
         <main>
           <Carousel showStatus={false}>
             <div>
