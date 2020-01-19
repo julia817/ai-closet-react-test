@@ -211,6 +211,7 @@ main {
         h5 {
           display: block;
           margin-top: 5px;
+
           text-transform: capitalize;
         }
 
@@ -232,6 +233,18 @@ main {
 
         .details {
           width: 40%;
+          display: inherit;
+          align-items: center;
+          flex-wrap: wrap;
+
+          h3 {
+            width: 100%;
+            height: max-content;
+          }
+
+          h5 {
+            margin-top: -100px;
+          }
         }
 
         .img-item {
