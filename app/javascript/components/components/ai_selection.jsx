@@ -8,7 +8,9 @@ class Selection extends Component {
     return (
       <div>
         <div className="items-sml">
-          <h2 className="font-34px">{this.props.title} 1</h2>
+          <h2 className="font-34px">
+            {this.props.title} {this.props.ID}
+          </h2>
           <div className="img-item-sml">
             <a href={this.props.link}>
               <img src={this.props.images}></img>

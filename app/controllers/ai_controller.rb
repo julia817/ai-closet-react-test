@@ -40,7 +40,7 @@ class AiController < ApplicationController
     end
 
     def bc_female
-        @patterns = Pattern.where(sex: "f").where(syle: "Busines Casual")
+        @patterns = Pattern.where(sex: "f").where(style: "Busines Casual")
         @images = img_urls(@patterns)
     end
 

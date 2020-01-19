@@ -79,6 +79,7 @@ class Select_Casual extends Component {
               <SelectionPage
                 title="Coordinate"
                 key={item.id}
+                ID={item.id}
                 link={item.link}
                 images={item.image}
                 images2={item.image2}
