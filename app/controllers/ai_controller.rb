@@ -40,12 +40,12 @@ class AiController < ApplicationController
     end
 
     def bc_female
-        @patterns = Pattern.where(sex: "f").where(style: "Busines Casual")
+        @patterns = Pattern.where(sex: "f").where(style: "business casual")
         @images = img_urls(@patterns)
     end
 
     def bc_male
-        @patterns = Pattern.where(sex: "m").where(style: "Business Casual")
+        @patterns = Pattern.where(sex: "m").where(style: "business casual")
         @images = img_urls(@patterns)
     end
 

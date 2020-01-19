@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Header from "./components/storeHeader";
 import Items from "./components/item-borderless";
+import PropTypes from "prop-types";
 
 class Store extends Component {
   state = {
@@ -9,6 +10,7 @@ class Store extends Component {
     bottomToggle: false,
     outerToggle: false,
     shoesToggle: false,
+
     Data: [
       {
         id: 1,
@@ -48,6 +50,30 @@ class Store extends Component {
         itemName: this.props.Data[9].type1,
         color: this.props.Data[9].color1,
         image: this.props.Images[9][0],
+        style: "display:none;"
+      },
+      {
+        id: 6,
+        itemGenre: "Top",
+        itemName: this.props.Data[13].type1,
+        color: this.props.Data[13].color1,
+        image: this.props.Images[13][0],
+        style: "display:none;"
+      },
+      {
+        id: 7,
+        itemGenre: "Top",
+        itemName: this.props.Data[14].type1,
+        color: this.props.Data[14].color1,
+        image: this.props.Images[14][0],
+        style: "display:none;"
+      },
+      {
+        id: 8,
+        itemGenre: "Top",
+        itemName: this.props.Data[15].type1,
+        color: this.props.Data[15].color1,
+        image: this.props.Images[15][0],
         style: "display:none;"
       }
     ]
@@ -98,6 +124,30 @@ class Store extends Component {
           itemName: this.props.Data[9].type1,
           color: this.props.Data[9].color1,
           image: this.props.Images[9][0],
+          style: "display:none;"
+        },
+        {
+          id: 6,
+          itemGenre: "Top",
+          itemName: this.props.Data[13].type1,
+          color: this.props.Data[13].color1,
+          image: this.props.Images[13][0],
+          style: "display:none;"
+        },
+        {
+          id: 7,
+          itemGenre: "Top",
+          itemName: this.props.Data[14].type1,
+          color: this.props.Data[14].color1,
+          image: this.props.Images[14][0],
+          style: "display:none;"
+        },
+        {
+          id: 8,
+          itemGenre: "Top",
+          itemName: this.props.Data[15].type1,
+          color: this.props.Data[15].color1,
+          image: this.props.Images[15][0],
           style: "display:none;"
         }
       ]
@@ -150,6 +200,30 @@ class Store extends Component {
           color: this.props.Data[9].color3,
           image: this.props.Images[9][2],
           style: "display:none;"
+        },
+        {
+          id: 6,
+          itemGenre: "Outer",
+          itemName: this.props.Data[13].type3,
+          color: this.props.Data[13].color3,
+          image: this.props.Images[13][2],
+          style: "display:none;"
+        },
+        {
+          id: 7,
+          itemGenre: "Outer",
+          itemName: this.props.Data[14].type1,
+          color: this.props.Data[14].color1,
+          image: this.props.Images[14][2],
+          style: "display:none;"
+        },
+        {
+          id: 8,
+          itemGenre: "Outer",
+          itemName: this.props.Data[15].type1,
+          color: this.props.Data[15].color1,
+          image: this.props.Images[15][2],
+          style: "display:none;"
         }
       ]
     });
@@ -201,6 +275,30 @@ class Store extends Component {
           color: this.props.Data[9].color4,
           image: this.props.Images[9][3],
           style: "display:none;"
+        },
+        {
+          id: 6,
+          itemGenre: "Shoes",
+          itemName: this.props.Data[13].type4,
+          color: this.props.Data[13].color4,
+          image: this.props.Images[13][3],
+          style: "display:none;"
+        },
+        {
+          id: 7,
+          itemGenre: "Shoes",
+          itemName: this.props.Data[14].type4,
+          color: this.props.Data[14].color4,
+          image: this.props.Images[14][3],
+          style: "display:none;"
+        },
+        {
+          id: 8,
+          itemGenre: "Shoes",
+          itemName: this.props.Data[15].type4,
+          color: this.props.Data[15].color4,
+          image: this.props.Images[15][3],
+          style: "display:none;"
         }
       ]
     });
@@ -251,25 +349,50 @@ class Store extends Component {
           color: this.props.Data[9].color2,
           image: this.props.Images[9][1],
           style: "display:none;"
+        },
+        {
+          id: 6,
+          itemGenre: "Bottoms",
+          itemName: this.props.Data[13].type2,
+          color: this.props.Data[13].color2,
+          image: this.props.Images[13][1],
+          style: "display:none;"
+        },
+        {
+          id: 7,
+          itemGenre: "Bottoms",
+          itemName: this.props.Data[14].type2,
+          color: this.props.Data[14].color2,
+          image: this.props.Images[14][1],
+          style: "display:none;"
+        },
+        {
+          id: 8,
+          itemGenre: "Bottoms",
+          itemName: this.props.Data[15].type2,
+          color: this.props.Data[15].color2,
+          image: this.props.Images[15][1],
+          style: "display:none;"
         }
       ]
     });
   };
   render() {
-    let mensTops = [
-      this.props.Images[5][0],
-      this.props.Images[6][0],
-      this.props.Images[7][0],
-      this.props.Images[8][0],
-      this.props.Images[9][0]
-    ];
-    let mensBottoms = [
-      this.props.Images[5][1],
-      this.props.Images[6][1],
-      this.props.Images[7][1],
-      this.props.Images[8][1],
-      this.props.Images[9][1]
-    ];
+    // let mensTops = [
+    //   this.props.Images[5][0],
+    //   this.props.Images[6][0],
+    //   this.props.Images[7][0],
+    //   this.props.Images[8][0],
+    //   this.props.Images[9][0]
+    // ];
+    // let mensBottoms = [
+    //   this.props.Images[5][1],
+    //   this.props.Images[6][1],
+    //   this.props.Images[7][1],
+    //   this.props.Images[8][1],
+    //   this.props.Images[9][1]
+    // ];
+    // console.log(this.state.Data);
 
     return (
       <React.Fragment>
@@ -323,5 +446,9 @@ class Store extends Component {
     );
   }
 }
+App.propTypes = {
+  Data: PropTypes.array,
+  Images: PropTypes.array
+};
 
 export default Store;
