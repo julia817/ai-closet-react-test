@@ -15,8 +15,12 @@ Rails.application.routes.draw do
   # match:'*path', to:'pages#index', via: :all
   get '/login', to: 'pages#login'
 
-# AiCoordinateページのルート設定
-  get '/AiCoordinate', to:'ai#choose'
+# AiCoordinateページのルート設定\
+
+  # temporary male or female page for miraisouzou
+  get '/AiCoordinate-GenderCheck', to: 'ai#ai_male_or_female'
+  get '/AiCoordinate-Female', to:'ai#choose_w'
+  get '/AiCoordinate-Male', to:'ai#choose_m'
   get '/AiCoordinate-Casual-Female', to: 'ai#casual_female'
   get '/AiCoordinate-Casual-Male', to: 'ai#casual_male'
   get '/AiCoordinate-BusinessCasual-Female', to: 'ai#bc_female'
@@ -27,12 +31,25 @@ Rails.application.routes.draw do
   get '/AiCoordinate-Formal', to:'ai#formal'
   get '/AiCoordinate-BusinessCasual', to:'ai#business'
   get '/AiCoordinate-Check', to: 'ai#rentOrBuyCheck'
-  get '/AiCoordinate-finalSelection', to: 'ai#final'
+  
+  get '/AiCoordinate-finalSelection-w-c1', to: 'ai#final_w_c1'
+  get '/AiCoordinate-finalSelection-w-c2', to: 'ai#final_w_c2'
+  get '/AiCoordinate-finalSelection-w-c3', to: 'ai#final_w_c3'
+  get '/AiCoordinate-finalSelection-w-c4', to: 'ai#final_w_c4'
+  get '/AiCoordinate-finalSelection-w-c5', to: 'ai#final_w_c5'
+
+    get '/AiCoordinate-finalSelection-m-c1', to: 'ai#final_m_c1'
+  get '/AiCoordinate-finalSelection-m-c2', to: 'ai#final_m_c2'
+  get '/AiCoordinate-finalSelection-m-c3', to: 'ai#final_m_c3'
+  get '/AiCoordinate-finalSelection-m-c4', to: 'ai#final_m_c4'
+  get '/AiCoordinate-finalSelection-m-c5', to: 'ai#final_m_c5'
   get '/AiCoordinate-SuitTensou', to: 'ai#sendtosuit'
   get '/AiCoordinate-Complete', to: 'ai#complete'
 
 
 
+
+  get 'test', to: 'pages#test'
   get '/LetMeChoose', to:'pages#self_choose'
   get '/Outfits', to:'pages#outfits'
   get '/Store', to:'pages#store'

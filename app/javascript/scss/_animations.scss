@@ -4,51 +4,72 @@
 
 }
 
+.men-tran-0 {
+    animation: onetoFour;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.men-tran-1 {
+    animation: twotoOne;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.men-tran-2 {
+    animation: threetoTwo;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.men-tran-3 {
+    animation: fourtoThree;
+    animation-duration: .3s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
 
 
-@keyframes top-bottom {
-    0% {
-        opacity: 1;
+@keyframes onetoFour {
+    from {
+        font-size: 60px;
     }
 
-    100% {
-        transform: translate(-50px, 500px);
-        opacity: 0;
+    to {
+        font-size: 30px;
     }
 }
 
-@keyframes two-top {
-    0% {
-        font-size: inherit;
-        opacity: 1;
+@keyframes twotoOne {
+    from {
+        font-size: 50px;
     }
 
-    100% {
-        opacity: 0;
-        transform: translate(30px, -100px);
+    to {
+        font-size: 60px;
     }
 }
 
-@keyframes three-2 {
-    0% {
-        font-size: inherit;
-        opacity: 1;
+@keyframes threetoTwo {
+    from {
+        font-size: 40px;
     }
 
-    100% {
-        opacity: 0;
-        transform: translate(30px, -100px);
+    to {
+        font-size: 50px;
     }
 }
 
-@keyframes four-3 {
-    0% {
-        font-size: inherit;
-        opacity: 1;
+
+@keyframes fourtoThree {
+    from {
+        font-size: 30px;
     }
 
-    100% {
-        opacity: 0;
-        transform: translate(30px, -100px);
+    to {
+        font-size: 40px;
     }
 }

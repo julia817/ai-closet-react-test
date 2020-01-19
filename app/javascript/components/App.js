@@ -4,12 +4,23 @@ import PropTypes from "prop-types";
 
 import Menu from "./components/menu";
 
+let menuClasses = [".men-tran-0", ".men-tran-1", ".men-tran-2", ".men-tran-3"];
 // this is the state object array: its declared here as it needs to be manipulated to add the movement of the
 let menuState = [
-  { id: 1, data: "Choose for me", link: "/AiCoordinate" },
-  { id: 2, data: "Let me choose", link: "/LetMeChoose" },
-  { id: 3, data: "Store", link: "/Store" },
-  { id: 4, data: "Outfits", link: "/Outfits" }
+  {
+    id: 1,
+    data: "Ai coordinate",
+    link: "/AiCoordinate-GenderCheck",
+    class: menuClasses[1]
+  },
+  {
+    id: 2,
+    data: "Self coordinate",
+    link: "/LetMeChoose",
+    class: menuClasses[2]
+  },
+  { id: 3, data: "Store", link: "/Store", class: menuClasses[3] },
+  { id: 4, data: "Outfits", link: "/Outfits", class: menuClasses[4] }
 ];
 
 class App extends Component {
@@ -27,7 +38,7 @@ class App extends Component {
       trackMouse: true
     };
     let propClothes = this.props.clothes;
-    console.log(propClothes);
+
     let weather = this.props.weather;
 
     return (
@@ -43,7 +54,12 @@ class App extends Component {
           <Swipeable className="full-height slide-nav" {...config}>
             <ul>
               {this.state.menuData.map(menu => (
-                <Menu key={menu.id} data={menu.data} link={menu.link} />
+                <Menu
+                  key={menu.id}
+                  data={menu.data}
+                  link={menu.link}
+                  class={menu.class}
+                />
               ))}
             </ul>
           </Swipeable>
@@ -62,13 +78,24 @@ class App extends Component {
     array.unshift(popItem);
   };
 
+  handleClasses = direction => {
+    let classArray = menuClasses.slice();
+    direction === "up"
+      ? this.popUnshift(classArray)
+      : direction === "down"
+      ? this.pushShift(classArray, 0)
+      : null;
+
+    menuClasses = classArray;
+  };
+
   //Handles menu movement by input of either "up" or "down" into (direction)
   handleMenu = direction => {
     let menuArray = this.state.menuData.slice();
     direction === "up"
-      ? this.pushShift(menuArray, 0)
+      ? this.pushShift(menuArray, 0) || this.handleClasses("up")
       : direction === "down"
-      ? this.popUnshift(menuArray)
+      ? this.popUnshift(menuArray) || this.handleClasses("down")
       : null;
 
     menuState = menuArray;

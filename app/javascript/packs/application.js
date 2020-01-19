@@ -34,7 +34,6 @@ import "../scss/style.scss";
 var componentRequireContext = require.context("components", true);
 var ReactRailsUJS = require("react_ujs");
 ReactRailsUJS.useContext(componentRequireContext);
-
 // const routing = (
 //   <Router>
 //     <Route exact path="/" render={() => <Redirect to="/app" />} />
