@@ -10,7 +10,10 @@ class StoreHeader extends Component {
             <button className="btn btn-secondary">{this.props.where}</button>
           </a>
 
-          <h1 className="font-60px">{this.props.page}</h1>
+          <div className="store-head">
+            <i className="fas fa-shopping-basket"></i>
+            <h1 className="font-60px">{this.props.page}</h1>
+          </div>
         </header>
       </React.Fragment>
     );

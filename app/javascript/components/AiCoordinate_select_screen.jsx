@@ -13,7 +13,7 @@ class AiSelectedItems extends Component {
   render() {
     let propData = this.props.Data[this.props.Query];
     let Images = this.props.Images[this.props.Query];
-
+    console.log(this.props.Data[this.props.Query].type2);
     let Data = [
       {
         id: 1,
@@ -24,24 +24,24 @@ class AiSelectedItems extends Component {
       },
       {
         id: 2,
-        itemGenre: "Bottom",
+        itemGenre: propData.type2 === "" ? "" : "Bottoms",
         itemName: propData.type2,
         color: propData.color2,
-        image: Images[1]
+        image: propData.type2 === "" ? "" : Images[1]
       },
       {
         id: 3,
         itemGenre: "Outer",
         itemName: propData.type3,
         color: propData.color3,
-        image: Images[2]
+        image: propData.type2 === "" ? Images[1] : Images[2]
       },
       {
         id: 4,
         itemGenre: "Shoes",
         itemName: propData.type4,
         color: propData.color4,
-        image: Images[3]
+        image: propData.type2 === "" ? Images[2] : Images[3]
       }
     ];
 
@@ -64,7 +64,14 @@ class AiSelectedItems extends Component {
 
         <main>
           <h2 className="font-36px">{this.state.comment}</h2>
-          <div className="items-div-borderless">
+          <div
+            className="items-div-borderless"
+            className={
+              Data[1].itemGenre === ""
+                ? "items-div-borderless remove-Item"
+                : "items-div-borderless"
+            }
+          >
             {Data.map(item => (
               <Item
                 itemGenre={item.itemGenre}
