@@ -40,12 +40,12 @@ class AiController < ApplicationController
     end
 
     def bc_female
-        @patterns = Pattern.where(sex: "f").where(syle: "bc")
+        @patterns = Pattern.where(sex: "f").where(syle: "Busines Casual")
         @images = img_urls(@patterns)
     end
 
     def bc_male
-        @patterns = Pattern.where(sex: "m").where(style: "bc")
+        @patterns = Pattern.where(sex: "m").where(style: "Business Casual")
         @images = img_urls(@patterns)
     end
 
@@ -59,55 +59,173 @@ class AiController < ApplicationController
         @images = img_urls(@patterns)
     end
 
-    def final_w_c1 
-        @patterns = @patterns = Pattern.where(sex: "f").where(style: "casual")
-        @images = img_urls(@patterns)
-    end
 
-    def final_w_c2 
-        @patterns = @patterns = Pattern.where(sex: "f").where(style: "casual")
-        @images = img_urls(@patterns)
-    end
 
-    def final_w_c3 
-        @patterns = @patterns = Pattern.where(sex: "f").where(style: "casual")
-        @images = img_urls(@patterns)
-    end
 
-    def final_w_c4 
-        @patterns = @patterns = Pattern.where(sex: "f").where(style: "casual")
-        @images = img_urls(@patterns)
-    end
+    # Male final coordinate
+    # Casual
 
-    def final_w_c5 
-        @patterns = @patterns = Pattern.where(sex: "f").where(style: "casual")
-        @images = img_urls(@patterns)
-    end
-
-    def final_m_c1 
+    def final_m_c_c1 
         @patterns = @patterns = Pattern.where(sex: "m").where(style: "casual")
         @images = img_urls(@patterns)
     end
 
-    def final_m_c2 
+    def final_m_c_c2 
         @patterns = @patterns = Pattern.where(sex: "m").where(style: "casual")
         @images = img_urls(@patterns)
     end
 
-    def final_m_c3 
+    def final_m_c_c3 
         @patterns = @patterns = Pattern.where(sex: "m").where(style: "casual")
         @images = img_urls(@patterns)
     end
 
-    def final_m_c4 
+    def final_m_c_c4 
         @patterns = @patterns = Pattern.where(sex: "m").where(style: "casual")
         @images = img_urls(@patterns)
     end
 
-    def final_m_c5 
+    def final_m_c_c5 
         @patterns = @patterns = Pattern.where(sex: "m").where(style: "casual")
         @images = img_urls(@patterns)
     end
+
+    # Business casual
+
+    def final_m_bc_c1 
+        @patterns = @patterns = Pattern.where(sex: "m").where(style: "Business Casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_m_bc_c2 
+        @patterns = @patterns = Pattern.where(sex: "m").where(style: "Business Casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_m_bc_c3 
+        @patterns = @patterns = Pattern.where(sex: "m").where(style: "Business Casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_m_bc_c4 
+        @patterns = @patterns = Pattern.where(sex: "m").where(style: "Business Casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_m_bc_c5 
+        @patterns = @patterns = Pattern.where(sex: "m").where(style: "Business Casual")
+        @images = img_urls(@patterns)
+    end
+
+        # formal
+
+    def final_m_fo_c1 
+        @patterns = @patterns = Pattern.where(sex: "m").where(style: "Formal")
+        @images = img_urls(@patterns)
+    end
+
+    def final_m_fo_c2 
+        @patterns = @patterns = Pattern.where(sex: "m").where(style: "Formal")
+        @images = img_urls(@patterns)
+    end
+
+    def final_m_fo_c3 
+        @patterns = @patterns = Pattern.where(sex: "m").where(style: "Formal")
+        @images = img_urls(@patterns)
+    end
+
+    def final_m_fo_c4 
+        @patterns = @patterns = Pattern.where(sex: "m").where(style: "Formal")
+        @images = img_urls(@patterns)
+    end
+
+    def final_m_fo_c5 
+        @patterns = @patterns = Pattern.where(sex: "m").where(style: "Formal")
+        @images = img_urls(@patterns)
+    end
+
+    # business casual ladies 
+
+     def final_w_bc_c1 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "Business Casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_bc_c2 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "Business Casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_bc_c3 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "Business Casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_bc_c4 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "Business Casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_bc_c5 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "Business Casual")
+        @images = img_urls(@patterns)
+    end
+
+        #Formal ladies 
+
+     def final_w_fo_c1 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "Formal")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_fo_c2 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "Formal")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_fo_c3 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "Formal")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_fo_c4 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "Formal")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_fo_c5 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "Formal")
+        @images = img_urls(@patterns)
+    end
+
+    # casual ladies
+
+         def final_w_c_c1 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_c_c2 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_c_c3 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_c_c4 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "casual")
+        @images = img_urls(@patterns)
+    end
+
+    def final_w_c_c5 
+        @patterns = @patterns = Pattern.where(sex: "f").where(style: "casual")
+        @images = img_urls(@patterns)
+    end
+
+    
 
 
     private

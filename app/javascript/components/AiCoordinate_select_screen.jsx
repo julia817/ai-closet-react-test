@@ -54,12 +54,20 @@ class AiSelectedItems extends Component {
     }
 
     let Gender = this.props.Gender;
-
+    let style =
+      this.props.Type === "c"
+        ? "Casual-"
+        : this.props.Type === "bc"
+        ? "BusinessCasual-"
+        : this.props.Type === "fo"
+        ? "Formal"
+        : "";
+    console.log(style);
     return (
       <React.Fragment>
         <LogoBackHead
           where="Back"
-          link={"/AiCoordinate-Casual-" + Gender + ""}
+          link={"/AiCoordinate-" + style + "" + Gender + ""}
         />
 
         <main>

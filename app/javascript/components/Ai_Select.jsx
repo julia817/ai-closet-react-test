@@ -10,16 +10,18 @@ class Select_Casual extends Component {
   state = {};
   render() {
     let Gender = this.props.Gender;
-    const coordinateOne = this.props.Images[0];
-    const coordinateTwo = this.props.Images[1];
-    const coordinateThree = this.props.Images[2];
-    const coordinateFour = this.props.Images[3];
-    const coordinateFive = this.props.Images[4];
+    let style = this.props.Type;
+
+    const coordinateOne = this.props.Images[0] || "";
+    const coordinateTwo = this.props.Images[1] || "";
+    const coordinateThree = this.props.Images[2] || "";
+    const coordinateFour = this.props.Images[3] || "";
+    const coordinateFive = this.props.Images[4] || "";
 
     let cooData = [
       {
         id: 1,
-        link: "/AiCoordinate-finalSelection-" + Gender + "-c1",
+        link: "/AiCoordinate-finalSelection-" + Gender + "-" + style + "-c1",
         image: coordinateOne[0],
         image2: coordinateOne[1],
         image3: coordinateOne[2],
@@ -27,7 +29,7 @@ class Select_Casual extends Component {
       },
       {
         id: 2,
-        link: "/AiCoordinate-finalSelection-" + Gender + "-c2",
+        link: "/AiCoordinate-finalSelection-" + Gender + "-" + style + "-c2",
         image: coordinateTwo[0],
         image2: coordinateTwo[1],
         image3: coordinateTwo[2],
@@ -35,7 +37,7 @@ class Select_Casual extends Component {
       },
       {
         id: 3,
-        link: "/AiCoordinate-finalSelection-" + Gender + "-c3",
+        link: "/AiCoordinate-finalSelection-" + Gender + "-" + style + "-c3",
         image: coordinateThree[0],
         image2: coordinateThree[1],
         image3: coordinateThree[2],
@@ -43,7 +45,7 @@ class Select_Casual extends Component {
       },
       {
         id: 4,
-        link: "/AiCoordinate-finalSelection-" + Gender + "-c4",
+        link: "/AiCoordinate-finalSelection-" + Gender + "-" + style + "-c4",
         image: coordinateFour[0],
         image2: coordinateFour[1],
         image3: coordinateFour[2],
@@ -51,7 +53,7 @@ class Select_Casual extends Component {
       },
       {
         id: 5,
-        link: "/AiCoordinate-finalSelection-" + Gender + "-c5",
+        link: "/AiCoordinate-finalSelection-" + Gender + "-" + style + "-c5",
         image: coordinateFive[0],
         image2: coordinateFive[1],
         image3: coordinateFive[2],
