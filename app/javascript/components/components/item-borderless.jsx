@@ -12,7 +12,7 @@ class Item extends Component {
               this.props.isDetailed === true ? "item-detailed" : "item"
             }
           >
-            <div className="piece" style={this.props.style}>
+            <div className="piece">
               <h2 className="font-28px">{this.props.itemGenre}</h2>
             </div>
             <div className="img-item">

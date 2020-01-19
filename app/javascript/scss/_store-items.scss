@@ -1,0 +1,45 @@
+.storefront {
+    display: flex;
+    flex-direction: row;
+
+    ul {
+        padding: 0;
+        margin-left: -150px;
+        height: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        li {
+            color: $text-terciary;
+            margin: 1em 0 1em 0;
+            font-weight: bold;
+            text-align: left;
+            list-style: none;
+            font-size: 30px;
+            transition: 0.5s;
+        }
+
+        .selected {
+            color: $text-primary;
+            transition: 0.5s;
+        }
+
+    }
+
+    .items-div-borderless {
+        width: 100%;
+        height: 75vh;
+        transition: 1s;
+    }
+}
+
+.store-head {
+    display: flex;
+    flex-direction: row;
+
+    i {
+
+        margin: auto 1em;
+    }
+}

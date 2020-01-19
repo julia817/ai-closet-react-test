@@ -32,17 +32,39 @@ Rails.application.routes.draw do
   get '/AiCoordinate-BusinessCasual', to:'ai#business'
   get '/AiCoordinate-Check', to: 'ai#rentOrBuyCheck'
   
-  get '/AiCoordinate-finalSelection-w-c1', to: 'ai#final_w_c1'
-  get '/AiCoordinate-finalSelection-w-c2', to: 'ai#final_w_c2'
-  get '/AiCoordinate-finalSelection-w-c3', to: 'ai#final_w_c3'
-  get '/AiCoordinate-finalSelection-w-c4', to: 'ai#final_w_c4'
-  get '/AiCoordinate-finalSelection-w-c5', to: 'ai#final_w_c5'
 
-    get '/AiCoordinate-finalSelection-m-c1', to: 'ai#final_m_c1'
-  get '/AiCoordinate-finalSelection-m-c2', to: 'ai#final_m_c2'
-  get '/AiCoordinate-finalSelection-m-c3', to: 'ai#final_m_c3'
-  get '/AiCoordinate-finalSelection-m-c4', to: 'ai#final_m_c4'
-  get '/AiCoordinate-finalSelection-m-c5', to: 'ai#final_m_c5'
+  # casual womens
+  get '/AiCoordinate-finalSelection-w-c-c1', to: 'ai#final_w_c_c1'
+  get '/AiCoordinate-finalSelection-w-c-c2', to: 'ai#final_w_c_c2'
+  get '/AiCoordinate-finalSelection-w-c-c3', to: 'ai#final_w_c_c3'
+  get '/AiCoordinate-finalSelection-w-c-c4', to: 'ai#final_w_c_c4'
+  get '/AiCoordinate-finalSelection-w-c-c5', to: 'ai#final_w_c_c5'
+# business wonens
+  get '/AiCoordinate-finalSelection-w-bc-c1', to: 'ai#final_w_bc_c1'
+  get '/AiCoordinate-finalSelection-w-bc-c2', to: 'ai#final_w_bc_c2'
+  get '/AiCoordinate-finalSelection-w-bc-c3', to: 'ai#final_w_bc_c3'
+  get '/AiCoordinate-finalSelection-w-bc-c4', to: 'ai#final_w_bc_c4'
+  get '/AiCoordinate-finalSelection-w-bc-c5', to: 'ai#final_w_bc_c5'
+# casual mens
+  get '/AiCoordinate-finalSelection-m-c-c1', to: 'ai#final_m_c_c1'
+  get '/AiCoordinate-finalSelection-m-c-c2', to: 'ai#final_m_c_c2'
+  get '/AiCoordinate-finalSelection-m-c-c3', to: 'ai#final_m_c_c3'
+  get '/AiCoordinate-finalSelection-m-c-c4', to: 'ai#final_m_c_c4'
+  get '/AiCoordinate-finalSelection-m-c-c5', to: 'ai#final_m_c_c5'
+# business mens
+  get '/AiCoordinate-finalSelection-m-bc-c1', to: 'ai#final_m_bc_c1'
+  get '/AiCoordinate-finalSelection-m-bc-c2', to: 'ai#final_m_bc_c2'
+  get '/AiCoordinate-finalSelection-m-bc-c3', to: 'ai#final_m_bc_c3'
+  get '/AiCoordinate-finalSelection-m-bc-c4', to: 'ai#final_m_bc_c4'
+  get '/AiCoordinate-finalSelection-m-bc-c5', to: 'ai#final_m_bc_c5'
+
+  # formal mens
+  get '/AiCoordinate-finalSelection-m-fo-c1', to: 'ai#final_m_fo_c1'
+  get '/AiCoordinate-finalSelection-m-fo-c2', to: 'ai#final_m_fo_c2'
+  get '/AiCoordinate-finalSelection-m-fo-c3', to: 'ai#final_m_fo_c3'
+  get '/AiCoordinate-finalSelection-m-fo-c4', to: 'ai#final_m_fo_c4'
+  get '/AiCoordinate-finalSelection-m-fo-c5', to: 'ai#final_m_fo_c5'
+
   get '/AiCoordinate-SuitTensou', to: 'ai#sendtosuit'
   get '/AiCoordinate-Complete', to: 'ai#complete'
 
